@@ -28,31 +28,40 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable}`}
     >
       <body>
-        <header className="header">
+        <header className="header" style={{ padding: "1rem 0", borderBottom: "1px solid #e2e8f0", backgroundColor: "white" }}>
           <div className="container flex items-center justify-between">
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.8rem", color: "var(--primary)", fontWeight: 800 }}>SUPRAJA</span>
+            {/* Logo and Emergency */}
+            <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span style={{ fontSize: "1.8rem", color: "var(--primary)", fontWeight: 800 }}>SUPRAJA</span>
+                </div>
+                <div style={{ fontSize: "1.2rem", color: "var(--secondary)", fontWeight: 700, letterSpacing: "1px" }}>
+                  HOSPITALS
+                </div>
               </div>
-              <div style={{ fontSize: "1.4rem", color: "var(--secondary)", fontWeight: 700, letterSpacing: "1px" }}>
-                HOSPITALS
-              </div>
-              <div style={{ fontSize: "0.6rem", color: "var(--text-main)", marginTop: "0.25rem", letterSpacing: "0.5px" }}>
-                A Unit Of DHANTURI HOSPITALS Pvt. Ltd.
+              <div style={{ borderLeft: "2px solid #e2e8f0", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <span style={{ color: "#E53E3E", fontWeight: 700, fontSize: "0.85rem" }}>Emergency 24/7</span>
+                <span style={{ color: "#0A2540", fontWeight: 700, fontSize: "0.95rem" }}>040-29329999</span>
               </div>
             </div>
-            <nav>
-              <ul className="nav-links" style={{ gap: "1.5rem", fontSize: "0.95rem" }}>
-                <li><a href="/about" className="nav-link">About Us</a></li>
-                <li><a href="/doctors" className="nav-link">Doctors</a></li>
-                <li><a href="/departments" className="nav-link">Specialties ▾</a></li>
-                <li><a href="/gallery" className="nav-link">Gallery</a></li>
-                <li><a href="/health-packages" className="nav-link">Health Packages</a></li>
-                <li><a href="/blogs" className="nav-link">Blogs</a></li>
-                <li><a href="/community" className="nav-link">Community Wellness</a></li>
-                <li><a href="/contact" className="nav-link">Contact Us</a></li>
-              </ul>
-            </nav>
+
+            {/* Navigation and Button */}
+            <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+              <nav>
+                <ul className="nav-links" style={{ gap: "1.5rem", fontSize: "0.95rem", color: "#64748b", fontWeight: 600 }}>
+                  <li><a href="/" className="nav-link" style={{ color: "#64748b" }}>Home</a></li>
+                  <li><a href="/departments" className="nav-link" style={{ color: "#64748b" }}>Specialties</a></li>
+                  <li><a href="/doctors" className="nav-link" style={{ color: "#64748b" }}>Doctors</a></li>
+                  <li><a href="/health-packages" className="nav-link" style={{ color: "#64748b" }}>Health Packages</a></li>
+                  <li><a href="/about" className="nav-link" style={{ color: "var(--secondary)", borderBottom: "2px solid var(--secondary)" }}>About Us</a></li>
+                  <li><a href="/contact" className="nav-link" style={{ color: "#64748b" }}>Contact Us</a></li>
+                </ul>
+              </nav>
+              <a href="/contact" className="btn" style={{ backgroundColor: "var(--secondary)", color: "white", padding: "0.5rem 1.25rem", borderRadius: "4px", fontSize: "0.9rem", fontWeight: 600 }}>
+                Book Appointment
+              </a>
+            </div>
           </div>
         </header>
 
