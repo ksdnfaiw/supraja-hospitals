@@ -4,13 +4,13 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[85vh] min-h-[600px] overflow-hidden -mt-[80px]">
+      <section className="relative w-full h-[80vh] md:h-[85vh] min-h-[500px] md:min-h-[600px] overflow-hidden -mt-[80px]">
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-clinical-blue relative overflow-hidden" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5')", backgroundSize: "cover", backgroundPosition: "center center" }}>
           </div>
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
-        <div className="relative z-10 max-w-container-max mx-auto h-full px-gutter flex flex-col justify-center items-start pt-[80px]">
+        <div className="relative z-10 max-w-container-max mx-auto h-full px-4 md:px-gutter flex flex-col justify-center items-start pt-[100px]">
           <div className="max-w-2xl text-white">
             <h1 className="font-display-lg text-display-lg mb-4">Clinical Excellence,<br/><span className="text-healing-emerald">Compassionate Care</span></h1>
             <p className="font-body-lg text-body-lg text-surface-container-low mb-8 opacity-90">
@@ -29,7 +29,7 @@ export default function HomePage() {
       </section>
 
       {/* Quick Actions Bento Grid */}
-      <section className="max-w-container-max mx-auto px-gutter -mt-16 relative z-20 mb-16">
+      <section className="max-w-container-max mx-auto px-4 md:px-gutter -mt-8 md:-mt-16 relative z-20 mb-12 md:mb-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
             <Calendar className="text-clinical-blue" size={36} />
@@ -55,8 +55,8 @@ export default function HomePage() {
       </section>
 
       {/* Centers of Excellence */}
-      <section className="py-margin-desktop bg-surface-gray">
-        <div className="max-w-container-max mx-auto px-gutter">
+      <section className="py-12 md:py-margin-desktop bg-surface-gray">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="font-display-lg text-display-lg text-clinical-blue mb-2">Our Centers of Excellence</h2>
@@ -104,8 +104,8 @@ export default function HomePage() {
       </section>
 
       {/* About Us Modern Split */}
-      <section className="py-margin-desktop bg-surface overflow-hidden">
-        <div className="max-w-container-max mx-auto px-gutter">
+      <section className="py-12 md:py-margin-desktop bg-surface overflow-hidden">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
@@ -156,8 +156,8 @@ export default function HomePage() {
       </section>
 
       {/* Patient Testimonials */}
-      <section className="py-margin-desktop bg-surface-gray">
-        <div className="max-w-container-max mx-auto px-gutter">
+      <section className="py-12 md:py-margin-desktop bg-surface-gray">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
           <div className="text-center mb-12">
             <h2 className="font-display-lg text-display-lg text-clinical-blue mb-4">Our Patients Love Us</h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Hear from those who have experienced our care firsthand.</p>
@@ -210,8 +210,8 @@ export default function HomePage() {
       </section>
 
       {/* Impact Statistics */}
-      <section className="py-margin-desktop bg-clinical-blue text-white">
-        <div className="max-w-container-max mx-auto px-gutter">
+      <section className="py-12 md:py-margin-desktop bg-clinical-blue text-white">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col gap-2 animate-fadeIn">
               <span className="text-display-lg font-display-lg text-healing-emerald">50k+</span>
