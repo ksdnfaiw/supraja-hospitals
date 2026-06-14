@@ -31,16 +31,20 @@ export default function AboutPage() {
       <section style={{ padding: "4rem 2rem", backgroundColor: "#f8fafc" }}>
         <div className="container" style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
           <div className="card" style={{ flex: 1, backgroundColor: "white", border: "none", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)" }}>
-            <div style={{ backgroundColor: "#0A2540", color: "white", width: "40px", height: "40px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>🚀</div>
-            <h3 style={{ color: "#0A2540", marginBottom: "1rem" }}>Our Mission</h3>
-            <p style={{ color: "#64748b", fontSize: "0.95rem", lineHeight: 1.6 }}>
+            <div style={{ backgroundColor: "#003057", color: "white", width: "40px", height: "40px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
+              <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>rocket_launch</span>
+            </div>
+            <h3 style={{ color: "#003057", marginBottom: "1rem" }}>Our Mission</h3>
+            <p style={{ color: "#43474e", fontSize: "0.95rem", lineHeight: 1.6 }}>
               To deliver world-class healthcare services through a patient-centric approach, fostering an environment of clinical excellence, medical research, and compassionate care that enhances the overall quality of life in our community.
             </p>
           </div>
           <div className="card" style={{ flex: 1, backgroundColor: "white", border: "none", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)" }}>
-            <div style={{ backgroundColor: "var(--secondary)", color: "white", width: "40px", height: "40px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>👁</div>
-            <h3 style={{ color: "#0A2540", marginBottom: "1rem" }}>Our Vision</h3>
-            <p style={{ color: "#64748b", fontSize: "0.95rem", lineHeight: 1.6 }}>
+            <div style={{ backgroundColor: "#008B8B", color: "white", width: "40px", height: "40px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
+              <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>visibility</span>
+            </div>
+            <h3 style={{ color: "#003057", marginBottom: "1rem" }}>Our Vision</h3>
+            <p style={{ color: "#43474e", fontSize: "0.95rem", lineHeight: 1.6 }}>
               To be recognized as the premier destination for integrated healthcare, setting global standards in medical outcomes, innovation, and ethical practices, while remaining deeply rooted in our commitment to healing.
             </p>
           </div>
@@ -50,22 +54,24 @@ export default function AboutPage() {
       {/* 3. Core Values */}
       <section style={{ padding: "4rem 2rem", backgroundColor: "#ffffff" }}>
         <div className="container text-center">
-          <h2 style={{ color: "#0A2540", marginBottom: "0.5rem" }}>Our Core Values</h2>
-          <p style={{ color: "#64748b", marginBottom: "3rem" }}>The guiding principles that drive our commitment to excellence every single day.</p>
+          <h2 style={{ color: "#003057", marginBottom: "0.5rem" }}>Our Core Values</h2>
+          <p style={{ color: "#43474e", marginBottom: "3rem" }}>The guiding principles that drive our commitment to excellence every single day.</p>
           
           <div className="grid grid-cols-3 gap-md" style={{ textAlign: "left" }}>
             {[
-              { icon: "⚖", title: "Patient First", desc: "Prioritizing the needs and safety of our patients above all else in every decision." },
-              { icon: "⚙", title: "Clinical Excellence", desc: "Striving for the highest medical standards and outcomes through continuous learning." },
-              { icon: "🛡", title: "Integrity & Transparency", desc: "Maintaining absolute honesty and ethical transparency in all clinical interactions." },
-              { icon: "❤", title: "Compassionate Care", desc: "Approaching every patient with empathy, kindness, and deep emotional support." },
-              { icon: "🤝", title: "Collaboration", desc: "Working as a unified team of specialists to provide comprehensive health solutions." },
-              { icon: "💡", title: "Continuous Innovation", desc: "Adopting the latest medical breakthroughs and technologies for better recovery." }
+              { icon: "balance", title: "Patient First", desc: "Prioritizing the needs and safety of our patients above all else in every decision." },
+              { icon: "settings", title: "Clinical Excellence", desc: "Striving for the highest medical standards and outcomes through continuous learning." },
+              { icon: "shield", title: "Integrity & Transparency", desc: "Maintaining absolute honesty and ethical transparency in all clinical interactions." },
+              { icon: "favorite", title: "Compassionate Care", desc: "Approaching every patient with empathy, kindness, and deep emotional support." },
+              { icon: "handshake", title: "Collaboration", desc: "Working as a unified team of specialists to provide comprehensive health solutions." },
+              { icon: "lightbulb", title: "Continuous Innovation", desc: "Adopting the latest medical breakthroughs and technologies for better recovery." }
             ].map((cv, i) => (
               <div key={i} className="card hover-elevate" style={{ border: "1px solid #e2e8f0", boxShadow: "none" }}>
-                <div style={{ color: "var(--secondary)", fontSize: "1.5rem", marginBottom: "1rem" }}>{cv.icon}</div>
-                <h4 style={{ color: "#0A2540", marginBottom: "0.5rem" }}>{cv.title}</h4>
-                <p style={{ color: "#64748b", fontSize: "0.9rem", lineHeight: 1.5 }}>{cv.desc}</p>
+                <div style={{ color: "#008B8B", marginBottom: "1rem" }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: "32px" }}>{cv.icon}</span>
+                </div>
+                <h4 style={{ color: "#003057", marginBottom: "0.5rem" }}>{cv.title}</h4>
+                <p style={{ color: "#43474e", fontSize: "0.9rem", lineHeight: 1.5 }}>{cv.desc}</p>
               </div>
             ))}
           </div>
@@ -111,13 +117,13 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Trust Strip */}
-      <section style={{ padding: "2rem", backgroundColor: "#f1f5f9", borderBottom: "1px solid #e2e8f0" }}>
+      <section style={{ padding: "2rem", backgroundColor: "#eaf1ff", borderBottom: "1px solid #dce9ff" }}>
         <div className="container" style={{ display: "flex", justifyContent: "space-around", alignItems: "center", flexWrap: "wrap", gap: "2rem" }}>
           {[
             "Multi-Specialty Center", "Advanced Infrastructure", "NABH Standards", "24/7 Patient Support"
           ].map((item, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#64748b", fontWeight: 600, fontSize: "0.9rem" }}>
-              <span style={{ fontSize: "1.2rem", color: "var(--secondary)" }}>✓</span> {item}
+            <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#43474e", fontWeight: 600, fontSize: "0.9rem" }}>
+              <span className="material-symbols-outlined" style={{ fontSize: "1.5rem", color: "#008B8B" }}>verified</span> {item}
             </div>
           ))}
         </div>
