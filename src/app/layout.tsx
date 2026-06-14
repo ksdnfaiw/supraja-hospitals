@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { MapPin, Phone, MessageCircle, Facebook, Youtube, Share2, Camera } from "lucide-react";
+import "./globals.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -131,10 +133,10 @@ export default function RootLayout({
           @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         `}} />
       </head>
-      <body className="bg-surface-gray text-on-surface font-body-md overflow-x-hidden">
+      <body className="bg-surface-gray text-on-surface font-body-md overflow-x-hidden transition-colors duration-500">
         
         {/* Top Navigation */}
-        <nav id="main-nav" className="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b border-border-subtle shadow-sm flex justify-between items-center px-gutter py-4 max-w-full">
+        <nav id="main-nav" className="fixed top-0 left-0 w-full z-50 bg-surface-gray border-b border-border-subtle shadow-sm flex justify-between items-center px-gutter py-4 max-w-full transition-all duration-300">
           <div className="max-w-container-max mx-auto w-full flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img alt="Supraja Hospitals Logo" className="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmpCShrqjBNivLsDwdr7FHpoBlYJVYWXDyRH15TdmWVVXWj73jNtxBnz2Jv0JivPhlfyAIadxcaBUW8TzoQWb1sR1xcQ7aslugDpm6_71yZ1S_cLUO2MF5ot75J1Ms-PEOCCgoZt7-a411eu6H_fJj5zmuNE23pkELaSpRTx8sFHx-KVng9JuAQyM8AEKQPg9THR5c1G9qCPiVcJMVkRvJoWWfHOv51ZYfBt7Mz5nP0WEKzz7_fzptvniLPyOuj0_GZrVxuW3CGnFA" />
@@ -176,15 +178,15 @@ export default function RootLayout({
                 <div className="space-y-4">
                   <h5 className="font-bold uppercase tracking-wider text-sm">CONTACT US</h5>
                   <div className="space-y-2 text-sm text-surface-container-low/80">
-                    <div className="flex gap-2"><span className="material-symbols-outlined text-sm">location_on</span> Nagole X Road, Hyderabad</div>
-                    <div className="flex gap-2"><span className="material-symbols-outlined text-sm">call</span> 040-29329999</div>
-                    <div className="flex gap-2"><span className="material-symbols-outlined text-sm">chat</span> 9281038298</div>
+                    <div className="flex gap-2 items-center"><MapPin size={16} /> Nagole X Road, Hyderabad</div>
+                    <div className="flex gap-2 items-center"><Phone size={16} /> 040-29329999</div>
+                    <div className="flex gap-2 items-center"><MessageCircle size={16} /> 9281038298</div>
                   </div>
                   <div className="flex gap-3">
-                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20"><span className="material-symbols-outlined text-lg">facebook</span></a>
-                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20"><span className="material-symbols-outlined text-lg">smart_display</span></a>
-                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20"><span className="material-symbols-outlined text-lg">share</span></a>
-                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20"><span className="material-symbols-outlined text-lg">photo_camera</span></a>
+                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Facebook size={18} /></a>
+                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Youtube size={18} /></a>
+                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Share2 size={18} /></a>
+                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Camera size={18} /></a>
                   </div>
                 </div>
               </div>
@@ -237,10 +239,10 @@ export default function RootLayout({
         {/* Sticky Contact Float */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
           <a className="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center" href="https://wa.me/9281038298">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
+            <MessageCircle size={24} />
           </a>
           <a className="bg-hospital-teal text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center" href="tel:04029329999">
-            <span className="material-symbols-outlined">call</span>
+            <Phone size={24} />
           </a>
         </div>
 

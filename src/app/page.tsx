@@ -1,3 +1,5 @@
+import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Play, Phone } from "lucide-react";
+
 export default function HomePage() {
   return (
     <>
@@ -16,7 +18,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-hospital-teal text-white font-label-md text-label-md px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-all flex items-center gap-2">
-                Find a Doctor <span className="material-symbols-outlined">arrow_forward</span>
+                Find a Doctor <ArrowRight size={18} />
               </button>
               <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-white/20 transition-all">
                 Our Specialties
@@ -30,22 +32,22 @@ export default function HomePage() {
       <section className="max-w-container-max mx-auto px-gutter -mt-16 relative z-20 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
-            <span className="material-symbols-outlined text-clinical-blue text-4xl">calendar_month</span>
+            <Calendar className="text-clinical-blue" size={36} />
             <h3 className="font-headline-md text-headline-md text-clinical-blue">Book Visit</h3>
             <p className="text-label-sm font-label-sm text-on-surface-variant">Schedule your consultation instantly online.</p>
           </div>
           <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
-            <span className="material-symbols-outlined text-clinical-blue text-4xl">lab_profile</span>
+            <TestTube className="text-clinical-blue" size={36} />
             <h3 className="font-headline-md text-headline-md text-clinical-blue">Diagnostics</h3>
             <p className="text-label-sm font-label-sm text-on-surface-variant">Access pathology & imaging reports easily.</p>
           </div>
           <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
-            <span className="material-symbols-outlined text-clinical-blue text-4xl">medical_services</span>
+            <Stethoscope className="text-clinical-blue" size={36} />
             <h3 className="font-headline-md text-headline-md text-clinical-blue">2nd Opinion</h3>
             <p className="text-label-sm font-label-sm text-on-surface-variant">Expert medical validation from senior specialists.</p>
           </div>
           <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform bg-clinical-blue !text-white">
-            <span className="material-symbols-outlined text-healing-emerald text-4xl">e911_emergency</span>
+            <Activity className="text-healing-emerald" size={36} />
             <h3 className="font-headline-md text-headline-md">Emergency</h3>
             <p className="text-label-sm font-label-sm text-surface-container-low opacity-80">24/7 Critical Care: 040-29329999</p>
           </div>
@@ -60,8 +62,8 @@ export default function HomePage() {
               <h2 className="font-display-lg text-display-lg text-clinical-blue mb-2">Our Centers of Excellence</h2>
               <p className="font-body-md text-body-md text-on-surface-variant">Precision medical care across advanced surgical and medical disciplines.</p>
             </div>
-            <a className="hidden md:flex items-center gap-2 text-hospital-teal font-label-md text-label-md hover:underline" href="/departments">
-              View All Specialties <span className="material-symbols-outlined">arrow_right_alt</span>
+            <a className="hidden md:flex items-center gap-2 text-hospital-teal font-label-md text-label-md hover:underline transition-all" href="/departments">
+              View All Specialties <ArrowRight size={18} />
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -70,7 +72,7 @@ export default function HomePage() {
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Cardiology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Comprehensive cardiac care including advanced bypass surgeries and interventions.</p>
               <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
-                View Details <span className="material-symbols-outlined">chevron_right</span>
+                View Details <ChevronRight size={18} />
               </a>
             </div>
             <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
@@ -78,7 +80,7 @@ export default function HomePage() {
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Neurology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Expert treatment for neurological disorders and advanced neuro-spine surgeries.</p>
               <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
-                View Details <span className="material-symbols-outlined">chevron_right</span>
+                View Details <ChevronRight size={18} />
               </a>
             </div>
             <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
@@ -121,26 +123,26 @@ export default function HomePage() {
                 Supraja Hospitals is a multi-specialty healthcare provider committed to providing comprehensive and quality medical care for all our patients. We strive to stay ahead of the curve in terms of cutting edge medical technology, highly experienced doctors, and caring staff.
               </p>
               <div className="space-y-4 mb-10">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 hover:translate-x-2 transition-transform">
                   <div className="mt-1 w-6 h-6 rounded-full bg-hospital-teal/10 flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-hospital-teal text-base" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                    <Check className="text-hospital-teal" size={14} />
                   </div>
                   <p className="font-body-md text-body-md text-on-surface"><strong className="text-clinical-blue">Our Mission:</strong> To provide accessible medical services with compassion, dignity, respect, and excellence.</p>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 hover:translate-x-2 transition-transform">
                   <div className="mt-1 w-6 h-6 rounded-full bg-hospital-teal/10 flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-hospital-teal text-base" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                    <Check className="text-hospital-teal" size={14} />
                   </div>
                   <p className="font-body-md text-body-md text-on-surface"><strong className="text-clinical-blue">Our Vision:</strong> High-quality affordable healthcare for everyone so they can live healthier lives.</p>
                 </div>
               </div>
               <div className="flex items-center gap-6">
-                <button className="bg-clinical-blue text-white font-label-md text-label-md px-8 py-4 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                <button className="bg-clinical-blue text-white font-label-md text-label-md px-8 py-4 rounded-lg shadow-md hover:bg-opacity-90 transition-all hover:scale-105">
                   Learn More About Us
                 </button>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal">
-                    <span className="material-symbols-outlined">call</span>
+                    <Phone size={24} />
                   </div>
                   <div>
                     <p className="text-label-sm font-label-sm text-on-surface-variant">General Inquiry</p>
@@ -166,7 +168,7 @@ export default function HomePage() {
                     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" alt="Patient Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <span className="material-symbols-outlined text-clinical-blue text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
                 </div>
@@ -180,7 +182,7 @@ export default function HomePage() {
                     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" alt="Patient Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <span className="material-symbols-outlined text-clinical-blue text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
                 </div>
@@ -194,7 +196,7 @@ export default function HomePage() {
                     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" alt="Patient Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <span className="material-symbols-outlined text-clinical-blue text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
                 </div>
