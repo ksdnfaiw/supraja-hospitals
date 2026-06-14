@@ -136,7 +136,7 @@ export default function RootLayout({
       <body className="bg-surface-gray text-on-surface font-body-md overflow-x-hidden transition-colors duration-500">
         
         {/* Top Navigation */}
-        <nav id="main-nav" className="fixed top-0 left-0 w-full z-50 bg-surface-gray border-b border-border-subtle shadow-sm flex justify-between items-center px-gutter py-4 max-w-full transition-all duration-300">
+        <nav id="main-nav" className="fixed top-0 left-0 w-full z-50 bg-white border-b border-border-subtle shadow-sm flex justify-between items-center px-gutter py-4 max-w-full transition-all duration-300">
           <div className="max-w-container-max mx-auto w-full flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img alt="Supraja Hospitals Logo" className="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmpCShrqjBNivLsDwdr7FHpoBlYJVYWXDyRH15TdmWVVXWj73jNtxBnz2Jv0JivPhlfyAIadxcaBUW8TzoQWb1sR1xcQ7aslugDpm6_71yZ1S_cLUO2MF5ot75J1Ms-PEOCCgoZt7-a411eu6H_fJj5zmuNE23pkELaSpRTx8sFHx-KVng9JuAQyM8AEKQPg9THR5c1G9qCPiVcJMVkRvJoWWfHOv51ZYfBt7Mz5nP0WEKzz7_fzptvniLPyOuj0_GZrVxuW3CGnFA" />
