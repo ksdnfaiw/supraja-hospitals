@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { MapPin, Phone, MessageCircle, Facebook, Youtube, Share2, Camera } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Globe, Video, Share2, Camera } from "lucide-react";
 import "./globals.css";
 import "./globals.css";
 
@@ -183,8 +183,8 @@ export default function RootLayout({
                     <div className="flex gap-2 items-center"><MessageCircle size={16} /> 9281038298</div>
                   </div>
                   <div className="flex gap-3">
-                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Facebook size={18} /></a>
-                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Youtube size={18} /></a>
+                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Globe size={18} /></a>
+                    <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Video size={18} /></a>
                     <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Share2 size={18} /></a>
                     <a href="#" className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"><Camera size={18} /></a>
                   </div>
