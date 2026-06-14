@@ -21,6 +21,7 @@ export default function RootLayout({
         <link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+      </head>
       <body className="bg-surface-gray text-on-surface font-body-md overflow-x-hidden transition-colors duration-500">
         
         {/* Top Navigation */}
