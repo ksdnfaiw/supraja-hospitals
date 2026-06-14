@@ -1,55 +1,48 @@
+import { Calendar, Award, Star } from "lucide-react";
+
 export default function DoctorsPage() {
   const doctors = [
-    { name: "Dr. Sarah Jenkins", spec: "Chief of Cardiology", exp: "20+ Years" },
-    { name: "Dr. Michael Chen", spec: "Senior Neurologist", exp: "15+ Years" },
-    { name: "Dr. Emily Rodriguez", spec: "Pediatric Specialist", exp: "12+ Years" },
-    { name: "Dr. James Wilson", spec: "Orthopedic Surgeon", exp: "18+ Years" },
-    { name: "Dr. Anita Patel", spec: "Lead Oncologist", exp: "22+ Years" },
-    { name: "Dr. David Thompson", spec: "General Surgery", exp: "14+ Years" },
+    { name: "Dr. Ramesh K.", specialty: "Chief Cardiologist", exp: "20+ Years", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" },
+    { name: "Dr. Sangeeta M.", specialty: "Senior Neurologist", exp: "15+ Years", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5" },
+    { name: "Dr. Anjali P.", specialty: "Head of Pediatrics", exp: "18+ Years", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" },
+    { name: "Dr. Vikram S.", specialty: "Orthopedic Surgeon", exp: "12+ Years", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5" },
   ];
 
   return (
-    <div className="animate-fade-in">
-      <section className="section section-dark">
-        <div className="container text-center">
-          <h1 style={{ color: "white" }}>Our Specialists</h1>
-          <p style={{ maxWidth: "800px", margin: "0 auto", fontSize: "1.2rem", color: "rgba(255,255,255,0.8)" }}>
-            Meet our team of highly qualified and experienced medical professionals dedicated to your health.
+    <div className="bg-surface-gray min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-clinical-blue text-white py-24 px-gutter relative overflow-hidden">
+        <div className="max-w-container-max mx-auto relative z-10 text-center">
+          <h1 className="font-display-lg text-display-lg mb-6">Our <span className="text-healing-emerald">Medical Experts</span></h1>
+          <p className="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto opacity-90">
+            Meet our team of highly experienced, board-certified specialists dedicated to providing you with world-class healthcare.
           </p>
         </div>
       </section>
 
-      <section className="section section-light" style={{ backgroundColor: "var(--bg-color)" }}>
-        <div className="container">
-          {/* Filters/Search placeholder */}
-          <div style={{ marginBottom: "var(--spacing-lg)", display: "flex", gap: "1rem", justifyContent: "center" }}>
-            <input type="text" placeholder="Search by name or specialty..." className="form-input" style={{ maxWidth: "400px" }} />
-            <button className="btn btn-primary">Search</button>
-          </div>
-
-          <div className="grid grid-cols-3">
-            {doctors.map((doc, idx) => (
-              <div key={idx} className="card" style={{ textAlign: "center" }}>
-                <div style={{ 
-                  width: "120px", 
-                  height: "120px", 
-                  backgroundColor: "var(--border-color)", 
-                  borderRadius: "50%", 
-                  margin: "0 auto var(--spacing-sm) auto",
-                  overflow: "hidden"
-                }}>
-                  {/* Image placeholder */}
-                </div>
-                <h3 style={{ color: "var(--primary)" }}>{doc.name}</h3>
-                <p style={{ color: "var(--secondary)", fontWeight: 600, margin: "0" }}>{doc.spec}</p>
-                <p style={{ fontSize: "0.9rem", marginTop: "0.25rem" }}>Experience: {doc.exp}</p>
-                
-                <div style={{ marginTop: "var(--spacing-sm)" }}>
-                  <a href="/appointment" className="btn btn-outline" style={{ width: "100%", padding: "0.5rem" }}>Book Appointment</a>
+      {/* Grid Section */}
+      <section className="py-20 px-gutter max-w-container-max mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {doctors.map((doctor, idx) => (
+            <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-border-subtle group hover:shadow-2xl transition-all duration-300">
+              <div className="h-64 overflow-hidden relative">
+                <img src={doctor.img} alt={doctor.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-clinical-blue text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                  <Star size={12} className="fill-hospital-teal text-hospital-teal" /> 4.9
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="p-6">
+                <h3 className="font-headline-md text-xl text-clinical-blue font-bold mb-1">{doctor.name}</h3>
+                <p className="font-label-md text-hospital-teal mb-4">{doctor.specialty}</p>
+                <div className="flex items-center gap-2 text-on-surface-variant font-label-sm mb-6">
+                  <Award size={16} /> {doctor.exp} Experience
+                </div>
+                <button className="w-full bg-clinical-blue text-white py-3 rounded-lg font-label-md hover:bg-opacity-90 transition-colors flex justify-center items-center gap-2">
+                  <Calendar size={18} /> Book Appointment
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

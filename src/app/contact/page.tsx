@@ -1,132 +1,95 @@
-"use client";
-
-import { useState } from "react";
+import { MapPin, Phone, MessageCircle, Mail, Clock } from "lucide-react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const validate = () => {
-    const newErrors: Record<string, string> = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim() || !/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Valid email is required";
-    if (!formData.phone.trim() || !/^\d{10,}$/.test(formData.phone.replace(/\D/g, ''))) newErrors.phone = "Valid phone number is required";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validate()) return;
-    
-    setStatus("loading");
-    // Simulate API call
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 1500);
-  };
-
   return (
-    <div className="animate-fade-in">
-      <section className="section section-dark">
-        <div className="container text-center">
-          <h1 style={{ color: "white" }}>Contact Us</h1>
-          <p style={{ maxWidth: "800px", margin: "0 auto", fontSize: "1.2rem", color: "rgba(255,255,255,0.8)" }}>
-            We're here to help. Reach out to us for appointments, inquiries, or emergency assistance.
+    <div className="bg-surface-gray min-h-screen">
+      <section className="bg-clinical-blue text-white py-24 px-gutter relative overflow-hidden">
+        <div className="max-w-container-max mx-auto relative z-10 text-center">
+          <h1 className="font-display-lg text-display-lg mb-6">Get in <span className="text-healing-emerald">Touch</span></h1>
+          <p className="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto opacity-90">
+            We are here to assist you 24/7. Reach out to us for appointments, emergency care, or general inquiries.
           </p>
         </div>
       </section>
 
-      <section className="section section-light">
-        <div className="container grid grid-cols-2">
-          {/* Contact Information */}
-          <div style={{ paddingRight: "var(--spacing-md)" }}>
-            <h2 style={{ color: "var(--primary)", marginBottom: "var(--spacing-sm)" }}>Get in Touch</h2>
-            <p>Our support team is available to assist you with your healthcare journey.</p>
-            
-            <div style={{ marginTop: "var(--spacing-md)" }}>
-              <div style={{ marginBottom: "var(--spacing-sm)" }}>
-                <h4 style={{ color: "var(--secondary)" }}>Emergency Line (24/7)</h4>
-                <p style={{ fontSize: "1.5rem", fontWeight: "bold" }}>+1 (555) 911-0000</p>
+      <section className="py-20 px-gutter max-w-container-max mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Contact Info */}
+          <div>
+            <h2 className="font-display-lg text-4xl text-clinical-blue mb-8">Contact Information</h2>
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal flex-shrink-0">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-xl text-clinical-blue mb-1">Our Location</h4>
+                  <p className="font-body-md text-on-surface-variant">Nagole X Road, Hyderabad,<br />Telangana, India - 500068</p>
+                </div>
               </div>
-              
-              <div style={{ marginBottom: "var(--spacing-sm)" }}>
-                <h4 style={{ color: "var(--secondary)" }}>General Inquiries</h4>
-                <p>+1 (555) 123-4567<br/>info@suprajahospitals.com</p>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal flex-shrink-0">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-xl text-clinical-blue mb-1">24/7 Emergency Line</h4>
+                  <p className="font-body-md text-on-surface-variant text-2xl font-bold text-hospital-teal">040-29329999</p>
+                </div>
               </div>
-              
-              <div>
-                <h4 style={{ color: "var(--secondary)" }}>Location</h4>
-                <p>123 Health Avenue<br/>Medical District, NY 10001</p>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal flex-shrink-0">
+                  <MessageCircle size={24} />
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-xl text-clinical-blue mb-1">WhatsApp Consult</h4>
+                  <p className="font-body-md text-on-surface-variant">+91 9281038298</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal flex-shrink-0">
+                  <Clock size={24} />
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-xl text-clinical-blue mb-1">Working Hours</h4>
+                  <p className="font-body-md text-on-surface-variant">Emergency: 24/7<br />OPD: Mon - Sat, 9:00 AM - 8:00 PM</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="card" style={{ padding: "var(--spacing-md)" }}>
-            <h3 style={{ marginBottom: "var(--spacing-sm)" }}>Send us a Message</h3>
-            
-            {status === "success" && (
-              <div style={{ padding: "1rem", backgroundColor: "rgba(5, 196, 107, 0.1)", borderLeft: "4px solid var(--secondary)", marginBottom: "1rem" }}>
-                <p style={{ margin: 0, color: "var(--secondary-hover)", fontWeight: 600 }}>Message sent successfully! We will contact you soon.</p>
+          <div className="bg-white p-8 rounded-2xl shadow-xl border border-border-subtle">
+            <h3 className="font-headline-md text-2xl text-clinical-blue mb-6">Send us a Message</h3>
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-label-sm text-on-surface-variant mb-2">First Name</label>
+                  <input type="text" className="w-full border border-border-subtle rounded-lg p-3 focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-all" placeholder="John" />
+                </div>
+                <div>
+                  <label className="block font-label-sm text-on-surface-variant mb-2">Last Name</label>
+                  <input type="text" className="w-full border border-border-subtle rounded-lg p-3 focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-all" placeholder="Doe" />
+                </div>
               </div>
-            )}
-
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label className="form-label">Full Name</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                />
-                {errors.name && <span style={{ color: "var(--accent)", fontSize: "0.85rem" }}>{errors.name}</span>}
+              <div>
+                <label className="block font-label-sm text-on-surface-variant mb-2">Phone Number</label>
+                <input type="tel" className="w-full border border-border-subtle rounded-lg p-3 focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-all" placeholder="+91 XXXXXXXXXX" />
               </div>
-
-              <div className="form-group">
-                <label className="form-label">Email Address</label>
-                <input 
-                  type="email" 
-                  className="form-input" 
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                />
-                {errors.email && <span style={{ color: "var(--accent)", fontSize: "0.85rem" }}>{errors.email}</span>}
+              <div>
+                <label className="block font-label-sm text-on-surface-variant mb-2">Select Department</label>
+                <select className="w-full border border-border-subtle rounded-lg p-3 focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-all bg-white">
+                  <option>General Inquiry</option>
+                  <option>Cardiology</option>
+                  <option>Neurology</option>
+                  <option>Orthopedics</option>
+                </select>
               </div>
-
-              <div className="form-group">
-                <label className="form-label">Phone Number</label>
-                <input 
-                  type="tel" 
-                  className="form-input" 
-                  value={formData.phone}
-                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                />
-                {errors.phone && <span style={{ color: "var(--accent)", fontSize: "0.85rem" }}>{errors.phone}</span>}
+              <div>
+                <label className="block font-label-sm text-on-surface-variant mb-2">Message</label>
+                <textarea rows={4} className="w-full border border-border-subtle rounded-lg p-3 focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-all" placeholder="How can we help you?"></textarea>
               </div>
-
-              <div className="form-group">
-                <label className="form-label">Message / Inquiry</label>
-                <textarea 
-                  className="form-input" 
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
-                ></textarea>
-                {errors.message && <span style={{ color: "var(--accent)", fontSize: "0.85rem" }}>{errors.message}</span>}
-              </div>
-
-              <button 
-                type="submit" 
-                className="btn btn-primary" 
-                style={{ width: "100%", marginTop: "1rem", opacity: status === "loading" ? 0.7 : 1 }}
-                disabled={status === "loading"}
-              >
-                {status === "loading" ? "Sending..." : "Submit Message"}
+              <button className="w-full bg-clinical-blue text-white py-4 rounded-lg font-bold hover:bg-opacity-90 transition-all flex justify-center items-center gap-2">
+                <Mail size={18} /> Submit Request
               </button>
             </form>
           </div>
