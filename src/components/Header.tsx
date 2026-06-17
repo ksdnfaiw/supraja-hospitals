@@ -1,10 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef } from "react";
+import { Menu, X, ChevronDown, Activity, Heart, Brain, Bone, Stethoscope } from "lucide-react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSpecialtiesOpen, setIsSpecialtiesOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsSpecialtiesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsSpecialtiesOpen(false);
+    }, 3000);
+  };
+
+  const handleDropdownClick = () => {
+    setIsSpecialtiesOpen(false);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
 
   return (
     <>
@@ -18,7 +36,67 @@ export default function Header() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-8">
             <a className="font-label-md text-label-md text-hospital-teal font-bold border-b-2 border-hospital-teal pb-1" href="/">Home</a>
-            <a className="font-label-md text-label-md text-on-surface-variant hover:text-hospital-teal transition-colors" href="/departments">Specialties</a>
+            <div 
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a 
+                className="font-label-md text-label-md text-on-surface-variant hover:text-hospital-teal transition-colors flex items-center gap-1 cursor-pointer py-6 -my-6" 
+                href="/departments"
+                onClick={handleDropdownClick}
+              >
+                Specialties <ChevronDown size={14} className={`transition-transform duration-300 ${isSpecialtiesOpen ? 'rotate-180 text-hospital-teal' : ''}`} />
+              </a>
+              
+              {/* Dropdown Menu */}
+              <div 
+                className={`absolute top-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2 w-[280px] bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-border-subtle p-3 transition-all duration-400 ease-out origin-top ${
+                  isSpecialtiesOpen ? "opacity-100 visible scale-100 translate-y-0" : "opacity-0 invisible scale-95 -translate-y-4"
+                }`}
+              >
+                {/* Decorative arrow pointing up */}
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-border-subtle rotate-45 rounded-tl-sm"></div>
+                
+                <div className="relative z-10 flex flex-col gap-1">
+                  <a href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
+                    <div className="w-10 h-10 rounded-full bg-clinical-blue/5 text-clinical-blue flex items-center justify-center group-hover/item:bg-clinical-blue group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm"><Heart size={18} /></div>
+                    <div>
+                      <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors">Cardiology</div>
+                      <div className="text-xs text-on-surface-variant/70 mt-0.5">Expert heart care</div>
+                    </div>
+                  </a>
+                  <a href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
+                    <div className="w-10 h-10 rounded-full bg-healing-emerald/10 text-healing-emerald flex items-center justify-center group-hover/item:bg-healing-emerald group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm"><Brain size={18} /></div>
+                    <div>
+                      <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors">Neurology</div>
+                      <div className="text-xs text-on-surface-variant/70 mt-0.5">Brain & spine specialists</div>
+                    </div>
+                  </a>
+                  <a href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
+                    <div className="w-10 h-10 rounded-full bg-clinical-blue/5 text-clinical-blue flex items-center justify-center group-hover/item:bg-clinical-blue group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm"><Activity size={18} /></div>
+                    <div>
+                      <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors">Oncology</div>
+                      <div className="text-xs text-on-surface-variant/70 mt-0.5">Comprehensive cancer care</div>
+                    </div>
+                  </a>
+                  <a href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
+                    <div className="w-10 h-10 rounded-full bg-healing-emerald/10 text-healing-emerald flex items-center justify-center group-hover/item:bg-healing-emerald group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm"><Bone size={18} /></div>
+                    <div>
+                      <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors">Orthopedics</div>
+                      <div className="text-xs text-on-surface-variant/70 mt-0.5">Bone & joint treatments</div>
+                    </div>
+                  </a>
+                  <a href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
+                    <div className="w-10 h-10 rounded-full bg-clinical-blue/5 text-clinical-blue flex items-center justify-center group-hover/item:bg-clinical-blue group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm"><Stethoscope size={18} /></div>
+                    <div>
+                      <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors">Gastroenterology</div>
+                      <div className="text-xs text-on-surface-variant/70 mt-0.5">Digestive health center</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
             <a className="font-label-md text-label-md text-on-surface-variant hover:text-hospital-teal transition-colors" href="/doctors">Doctors</a>
             <a className="font-label-md text-label-md text-on-surface-variant hover:text-hospital-teal transition-colors" href="/health-packages">Health Packages</a>
             <a className="font-label-md text-label-md text-on-surface-variant hover:text-hospital-teal transition-colors" href="/about">About Us</a>

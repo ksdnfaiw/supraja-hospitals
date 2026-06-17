@@ -1,79 +1,92 @@
 import InsurancePartners from "@/components/InsurancePartners";
+import { ArrowRight, Shield, Target, Eye, Heart, Award, Users, CheckCircle, Clock, Building2, Microscope, Stethoscope, ChevronRight, Activity } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <div className="about-page">
+    <div className="flex flex-col min-h-screen">
       {/* 1. Hero Section */}
-      <section className="about-hero" style={{ 
-        backgroundColor: "#1e293b", 
-        color: "white", 
-        padding: "6rem 2rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start"
-      }}>
-        <div className="container" style={{ maxWidth: "800px", margin: "0 auto", textAlign: "left" }}>
-          <div style={{ backgroundColor: "var(--secondary)", color: "white", padding: "0.25rem 0.75rem", borderRadius: "100px", display: "inline-block", fontSize: "0.8rem", fontWeight: 700, marginBottom: "1.5rem" }}>
-            OUR LEGACY
-          </div>
-          <h1 style={{ fontSize: "3rem", lineHeight: 1.2, marginBottom: "1.5rem" }}>
-            Healing Lives Through Compassion,<br/>Excellence & Trust
-          </h1>
-          <p style={{ fontSize: "1.1rem", lineHeight: 1.6, marginBottom: "2.5rem", maxWidth: "600px" }}>
-            At Supraja Hospitals, our purpose transcends medical treatment. We are dedicated to providing accessible, high-quality healthcare that combines advanced technology with human-centric care, rooted in the legacy of the Dhanturi Group.
-          </p>
-          <div style={{ display: "flex", gap: "1rem" }}>
-            <button className="btn btn-primary" style={{ backgroundColor: "#0A2540", borderColor: "#0A2540", color: "white" }}>Explore Our Story</button>
-            <button className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.3)", color: "white" }}>View Facilities</button>
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-clinical-blue -mt-[80px]">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-clinical-blue via-clinical-blue/90 to-transparent"></div>
+        </div>
+        
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter relative z-10 pt-24 md:pt-32 pb-16">
+          <div className="max-w-3xl text-white">
+            <div className="inline-block px-5 py-2 rounded-full bg-healing-emerald/20 border border-healing-emerald/30 text-healing-emerald font-label-sm tracking-widest uppercase mb-8 backdrop-blur-md">
+              Our Legacy
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display-lg mb-6 leading-[1.1]">
+              Healing Lives Through <span className="text-healing-emerald">Compassion & Trust</span>
+            </h1>
+            <p className="text-lg md:text-xl text-surface-container-low/90 mb-10 leading-relaxed max-w-2xl font-body-md">
+              At Supraja Hospitals, our purpose transcends medical treatment. We are dedicated to providing accessible, high-quality healthcare that combines advanced technology with human-centric care.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="#story" className="bg-healing-emerald text-white font-label-md px-8 py-4 rounded-xl shadow-lg hover:bg-opacity-90 transition-all flex items-center gap-2 group hover:shadow-healing-emerald/20 hover:shadow-xl">
+                Explore Our Story <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href="#facilities" className="bg-white/5 backdrop-blur-md border border-white/20 text-white font-label-md px-8 py-4 rounded-xl hover:bg-white/10 transition-all">
+                View Facilities
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 2. Mission & Vision */}
-      <section style={{ padding: "4rem 2rem", backgroundColor: "#f8fafc" }}>
-        <div className="container" style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
-          <div className="card" style={{ flex: 1, backgroundColor: "white", border: "none", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)" }}>
-            <div style={{ backgroundColor: "#003057", color: "white", width: "40px", height: "40px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
-              <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>rocket_launch</span>
+      <section className="py-20 md:py-28 bg-surface-gray relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-healing-emerald/5 rounded-l-full blur-3xl -z-0"></div>
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Mission Card */}
+            <div className="bg-white rounded-3xl p-10 md:p-12 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-border-subtle group hover:shadow-[0_20px_40px_-15px_rgba(0,168,107,0.1)] transition-all duration-500 hover:-translate-y-2">
+              <div className="w-16 h-16 rounded-2xl bg-clinical-blue/5 flex items-center justify-center mb-8 group-hover:bg-clinical-blue group-hover:scale-110 transition-all duration-500 shadow-sm">
+                <Target size={32} className="text-clinical-blue group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="text-3xl font-display-md text-clinical-blue mb-4">Our Mission</h3>
+              <p className="text-on-surface-variant leading-relaxed text-lg font-body-md">
+                To deliver world-class healthcare services through a patient-centric approach, fostering an environment of clinical excellence, medical research, and compassionate care that enhances the overall quality of life in our community.
+              </p>
             </div>
-            <h3 style={{ color: "#003057", marginBottom: "1rem" }}>Our Mission</h3>
-            <p style={{ color: "#43474e", fontSize: "0.95rem", lineHeight: 1.6 }}>
-              To deliver world-class healthcare services through a patient-centric approach, fostering an environment of clinical excellence, medical research, and compassionate care that enhances the overall quality of life in our community.
-            </p>
-          </div>
-          <div className="card" style={{ flex: 1, backgroundColor: "white", border: "none", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)" }}>
-            <div style={{ backgroundColor: "#008B8B", color: "white", width: "40px", height: "40px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
-              <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>visibility</span>
+
+            {/* Vision Card */}
+            <div className="bg-white rounded-3xl p-10 md:p-12 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-border-subtle group hover:shadow-[0_20px_40px_-15px_rgba(0,168,107,0.1)] transition-all duration-500 hover:-translate-y-2">
+              <div className="w-16 h-16 rounded-2xl bg-healing-emerald/10 flex items-center justify-center mb-8 group-hover:bg-healing-emerald group-hover:scale-110 transition-all duration-500 shadow-sm">
+                <Eye size={32} className="text-healing-emerald group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="text-3xl font-display-md text-clinical-blue mb-4">Our Vision</h3>
+              <p className="text-on-surface-variant leading-relaxed text-lg font-body-md">
+                To be recognized as the premier destination for integrated healthcare, setting global standards in medical outcomes, innovation, and ethical practices, while remaining deeply rooted in our commitment to healing.
+              </p>
             </div>
-            <h3 style={{ color: "#003057", marginBottom: "1rem" }}>Our Vision</h3>
-            <p style={{ color: "#43474e", fontSize: "0.95rem", lineHeight: 1.6 }}>
-              To be recognized as the premier destination for integrated healthcare, setting global standards in medical outcomes, innovation, and ethical practices, while remaining deeply rooted in our commitment to healing.
-            </p>
           </div>
         </div>
       </section>
 
       {/* 3. Core Values */}
-      <section style={{ padding: "4rem 2rem", backgroundColor: "#ffffff" }}>
-        <div className="container text-center">
-          <h2 style={{ color: "#003057", marginBottom: "0.5rem" }}>Our Core Values</h2>
-          <p style={{ color: "#43474e", marginBottom: "3rem" }}>The guiding principles that drive our commitment to excellence every single day.</p>
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-display-lg text-clinical-blue mb-6">Our Core Values</h2>
+            <p className="text-lg text-on-surface-variant font-body-md">The guiding principles that drive our commitment to excellence every single day.</p>
+          </div>
           
-          <div className="grid grid-cols-3 gap-md" style={{ textAlign: "left" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: "balance", title: "Patient First", desc: "Prioritizing the needs and safety of our patients above all else in every decision." },
-              { icon: "settings", title: "Clinical Excellence", desc: "Striving for the highest medical standards and outcomes through continuous learning." },
-              { icon: "shield", title: "Integrity & Transparency", desc: "Maintaining absolute honesty and ethical transparency in all clinical interactions." },
-              { icon: "favorite", title: "Compassionate Care", desc: "Approaching every patient with empathy, kindness, and deep emotional support." },
-              { icon: "handshake", title: "Collaboration", desc: "Working as a unified team of specialists to provide comprehensive health solutions." },
-              { icon: "lightbulb", title: "Continuous Innovation", desc: "Adopting the latest medical breakthroughs and technologies for better recovery." }
+              { icon: Heart, title: "Patient First", desc: "Prioritizing the needs and safety of our patients above all else in every decision." },
+              { icon: Award, title: "Clinical Excellence", desc: "Striving for the highest medical standards and outcomes through continuous learning." },
+              { icon: Shield, title: "Integrity & Transparency", desc: "Maintaining absolute honesty and ethical transparency in all clinical interactions." },
+              { icon: Users, title: "Compassionate Care", desc: "Approaching every patient with empathy, kindness, and deep emotional support." },
+              { icon: Stethoscope, title: "Collaboration", desc: "Working as a unified team of specialists to provide comprehensive health solutions." },
+              { icon: Microscope, title: "Continuous Innovation", desc: "Adopting the latest medical breakthroughs and technologies for better recovery." }
             ].map((cv, i) => (
-              <div key={i} className="card hover-elevate" style={{ border: "1px solid #e2e8f0", boxShadow: "none" }}>
-                <div style={{ color: "#008B8B", marginBottom: "1rem" }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: "32px" }}>{cv.icon}</span>
+              <div key={i} className="p-8 rounded-2xl bg-surface-gray/30 border border-border-subtle hover:bg-white hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-xl bg-white shadow-sm border border-border-subtle flex items-center justify-center mb-6 group-hover:bg-healing-emerald group-hover:border-healing-emerald group-hover:scale-110 transition-all duration-300">
+                  <cv.icon size={24} className="text-hospital-teal group-hover:text-white transition-colors" />
                 </div>
-                <h4 style={{ color: "#003057", marginBottom: "0.5rem" }}>{cv.title}</h4>
-                <p style={{ color: "#43474e", fontSize: "0.9rem", lineHeight: 1.5 }}>{cv.desc}</p>
+                <h4 className="text-xl font-display-sm text-clinical-blue mb-3">{cv.title}</h4>
+                <p className="text-on-surface-variant leading-relaxed font-body-md">{cv.desc}</p>
               </div>
             ))}
           </div>
@@ -81,105 +94,97 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Legacy Section */}
-      <section style={{ padding: "5rem 2rem", backgroundColor: "#0A2540", color: "white" }}>
-        <div className="container" style={{ display: "flex", gap: "4rem", alignItems: "center" }}>
-          <div style={{ flex: 1 }}>
-            <h2 style={{ marginBottom: "1.5rem" }}>The Dhanturi Group Legacy</h2>
-            <p style={{ marginBottom: "1.5rem", color: "rgba(255,255,255,0.9)", lineHeight: 1.6 }}>
-              Founded in 1990, the Dhanturi Group began with a singular vision: to redefine service standards in hospitality and healthcare. What started as a commitment to excellence has blossomed into a growing healthcare institution trusted by thousands.
-            </p>
-            <p style={{ marginBottom: "3rem", color: "rgba(255,255,255,0.9)", lineHeight: 1.6 }}>
-              Our journey is marked by a series of transformative milestones, evolving from a multi-disciplinary business group to a specialized healthcare powerhouse that Supraja Hospitals represents today.
-            </p>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", borderLeft: "2px solid var(--secondary)", paddingLeft: "1.5rem" }}>
-              <div>
-                <div style={{ color: "var(--secondary)", fontWeight: 700, fontSize: "0.9rem" }}>1990</div>
-                <h4 style={{ margin: "0.25rem 0" }}>Foundation of Dhanturi Group</h4>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>A commitment to service excellence begins across industries.</p>
+      <section id="story" className="py-20 md:py-32 bg-clinical-blue text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[100%] bg-hospital-teal/10 blur-[120px] rounded-full"></div>
+        </div>
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white font-label-sm tracking-widest uppercase mb-6 backdrop-blur-md">
+                Our History
               </div>
-              <div>
-                <div style={{ color: "var(--secondary)", fontWeight: 700, fontSize: "0.9rem" }}>2010s</div>
-                <h4 style={{ margin: "0.25rem 0" }}>Strategic Pivot to Healthcare</h4>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>Identifying the critical need for high-quality clinical infrastructure.</p>
-              </div>
-              <div>
-                <div style={{ color: "var(--secondary)", fontWeight: 700, fontSize: "0.9rem" }}>Today</div>
-                <h4 style={{ margin: "0.25rem 0" }}>Supraja Hospitals Rising</h4>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>Evolving into a 100-bed multi-specialty institution.</p>
+              <h2 className="text-4xl md:text-5xl font-display-lg mb-6 leading-tight">The Dhanturi Group Legacy</h2>
+              <p className="text-lg text-surface-container-low/80 mb-6 leading-relaxed font-body-md">
+                Founded in 1990, the Dhanturi Group began with a singular vision: to redefine service standards in hospitality and healthcare. What started as a commitment to excellence has blossomed into a growing healthcare institution trusted by thousands.
+              </p>
+              <p className="text-lg text-surface-container-low/80 mb-12 leading-relaxed font-body-md">
+                Our journey is marked by a series of transformative milestones, evolving from a multi-disciplinary business group to a specialized healthcare powerhouse that Supraja Hospitals represents today.
+              </p>
+              
+              <div className="space-y-8 border-l-2 border-healing-emerald/30 pl-8 relative ml-3">
+                <div className="relative">
+                  <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-healing-emerald shadow-[0_0_15px_rgba(0,168,107,0.6)] border-4 border-clinical-blue box-content"></div>
+                  <div className="text-healing-emerald font-bold tracking-wider mb-1 text-sm uppercase">1990</div>
+                  <h4 className="text-xl font-display-sm mb-2 text-white">Foundation of Dhanturi Group</h4>
+                  <p className="text-surface-container-low/60 font-body-md">A commitment to service excellence begins across industries.</p>
+                </div>
+                <div className="relative">
+                  <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-healing-emerald shadow-[0_0_15px_rgba(0,168,107,0.6)] border-4 border-clinical-blue box-content"></div>
+                  <div className="text-healing-emerald font-bold tracking-wider mb-1 text-sm uppercase">2010s</div>
+                  <h4 className="text-xl font-display-sm mb-2 text-white">Strategic Pivot to Healthcare</h4>
+                  <p className="text-surface-container-low/60 font-body-md">Identifying the critical need for high-quality clinical infrastructure.</p>
+                </div>
+                <div className="relative">
+                  <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-healing-emerald shadow-[0_0_15px_rgba(0,168,107,0.6)] border-4 border-clinical-blue box-content"></div>
+                  <div className="text-healing-emerald font-bold tracking-wider mb-1 text-sm uppercase">Today</div>
+                  <h4 className="text-xl font-display-sm mb-2 text-white">Supraja Hospitals Rising</h4>
+                  <p className="text-surface-container-low/60 font-body-md">Evolving into a 100-bed multi-specialty institution.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div style={{ flex: 1 }}>
-            <div style={{ backgroundColor: "#cbd5e1", borderRadius: "12px", height: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#475569", fontWeight: 700, fontSize: "1.5rem" }}>ADVANCED CATH-LAB IMAGE</span>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-healing-emerald/20 blur-2xl rounded-[2rem] transform group-hover:scale-105 transition-transform duration-700"></div>
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5" alt="Hospital Infrastructure" className="relative z-10 w-full h-[500px] lg:h-[600px] object-cover rounded-[2rem] shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
             </div>
           </div>
         </div>
       </section>
 
       {/* 5. Trust Strip */}
-      <section style={{ padding: "2rem", backgroundColor: "#eaf1ff", borderBottom: "1px solid #dce9ff" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "space-around", alignItems: "center", flexWrap: "wrap", gap: "2rem" }}>
+      <section className="py-8 border-b border-border-subtle bg-white">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter flex flex-wrap justify-between items-center gap-6">
           {[
             "Multi-Specialty Center", "Advanced Infrastructure", "NABH Standards", "24/7 Patient Support"
           ].map((item, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#43474e", fontWeight: 600, fontSize: "0.9rem" }}>
-              <span className="material-symbols-outlined" style={{ fontSize: "1.5rem", color: "#008B8B" }}>verified</span> {item}
+            <div key={i} className="flex items-center gap-3 text-clinical-blue font-label-md tracking-wide">
+              <CheckCircle size={22} className="text-healing-emerald" /> {item}
             </div>
           ))}
         </div>
       </section>
 
       {/* 6. Infrastructure */}
-      <section style={{ padding: "5rem 2rem", backgroundColor: "white" }}>
-        <div className="container">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3rem" }}>
-            <div style={{ maxWidth: "600px" }}>
-              <h2 style={{ color: "#0A2540", marginBottom: "0.5rem" }}>World-Class Infrastructure</h2>
-              <p style={{ color: "#64748b" }}>Equipped with state-of-the-art medical technology to ensure precision, speed, and safety in every clinical procedure.</p>
+      <section id="facilities" className="py-20 md:py-28 bg-surface-gray">
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl font-display-lg text-clinical-blue mb-6">World-Class Infrastructure</h2>
+              <p className="text-lg text-on-surface-variant leading-relaxed font-body-md">Equipped with state-of-the-art medical technology to ensure precision, speed, and safety in every clinical procedure.</p>
             </div>
-            <button className="btn" style={{ backgroundColor: "#e2e8f0", color: "#0f172a" }}>Download Facility Guide</button>
+            <button className="bg-white text-clinical-blue border border-border-subtle hover:border-clinical-blue hover:shadow-md font-label-md px-6 py-3 rounded-lg transition-all flex items-center gap-2 group">
+              Download Facility Guide <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
 
-          <div className="grid grid-cols-4 gap-md">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "100-Bed Facility", desc: "Comprehensive inpatient and outpatient services." },
-              { title: "Advanced OTs", desc: "Modular Operation Theaters equipped for complex surgeries." },
-              { title: "Cath Lab", desc: "Specialized cardiac unit for interventional procedures." },
-              { title: "24/7 Emergency", desc: "Round-the-clock critical care with dedicated ambulances." }
+              { title: "100-Bed Facility", desc: "Comprehensive inpatient and outpatient services.", icon: Building2 },
+              { title: "Advanced OTs", desc: "Modular Operation Theaters equipped for complex surgeries.", icon: Activity },
+              { title: "Cath Lab", desc: "Specialized cardiac unit for interventional procedures.", icon: Heart },
+              { title: "24/7 Emergency", desc: "Round-the-clock critical care with dedicated ambulances.", icon: Clock }
             ].map((infra, i) => (
-              <div key={i} style={{ backgroundColor: "#0A2540", color: "white", padding: "1.5rem", borderRadius: "8px", height: "250px", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
-                <h4 style={{ marginBottom: "0.5rem" }}>{infra.title}</h4>
-                <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.8)" }}>{infra.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Leadership & CTA */}
-      <section style={{ padding: "4rem 2rem", backgroundColor: "#f8fafc" }}>
-        <div className="container" style={{ display: "flex", gap: "4rem", alignItems: "center" }}>
-          <div style={{ flex: 1 }}>
-            <h2 style={{ color: "#0A2540", marginBottom: "1rem" }}>The People Behind the Institution</h2>
-            <p style={{ color: "#64748b", marginBottom: "2rem", lineHeight: 1.6 }}>
-              Our leadership team brings decades of combined experience in hospital management and clinical excellence, ensuring Supraja Hospitals remains a beacon of trust.
-            </p>
-            <blockquote style={{ borderLeft: "3px solid var(--secondary)", paddingLeft: "1rem", fontStyle: "italic", color: "var(--secondary)", fontWeight: 600 }}>
-              "Excellence is not an act, but a habit of continuous improvement."
-            </blockquote>
-          </div>
-          <div style={{ flex: 2 }} className="grid grid-cols-2 gap-md">
-            {[
-              { title: "Vision-Driven Growth", desc: "Strategically expanding our services and facilities to meet evolving healthcare needs." },
-              { title: "Ethical Governance", desc: "Implementing strict ethical frameworks and protocols to ensure patient safety." },
-              { title: "Academic Leadership", desc: "Fostering a culture of research and teaching among our medical staff." },
-              { title: "Community Engagement", desc: "Actively participating in local health initiatives and affordable care programs." }
-            ].map((l, i) => (
-              <div key={i} className="card" style={{ backgroundColor: "white", border: "1px solid #e2e8f0", boxShadow: "none" }}>
-                <h4 style={{ color: "#0A2540", marginBottom: "0.5rem" }}>{l.title}</h4>
-                <p style={{ color: "#64748b", fontSize: "0.85rem", lineHeight: 1.5 }}>{l.desc}</p>
+              <div key={i} className="group relative overflow-hidden rounded-2xl bg-clinical-blue p-8 h-[280px] flex flex-col justify-end shadow-lg hover:-translate-y-2 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-clinical-blue via-clinical-blue/80 to-clinical-blue/20 z-10"></div>
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl -z-0 group-hover:scale-150 transition-transform duration-700"></div>
+                
+                <div className="relative z-20">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 text-healing-emerald backdrop-blur-sm border border-white/10 group-hover:-translate-y-2 transition-transform duration-500">
+                    <infra.icon size={24} />
+                  </div>
+                  <h4 className="text-xl font-display-sm text-white mb-2">{infra.title}</h4>
+                  <p className="text-surface-container-low/70 text-sm leading-relaxed font-body-md">{infra.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -190,13 +195,20 @@ export default function AboutPage() {
       <InsurancePartners />
 
       {/* 9. Green CTA Strip */}
-      <section style={{ backgroundColor: "var(--secondary)", padding: "4rem 2rem", textAlign: "center", color: "white" }}>
-        <div className="container">
-          <h2 style={{ marginBottom: "1rem" }}>Ready to Experience Care?</h2>
-          <p style={{ marginBottom: "2rem", fontSize: "1.1rem" }}>Schedule a visit or consult with our experts today to start your journey towards better health.</p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
-            <button className="btn" style={{ backgroundColor: "#0A2540", color: "white", border: "none" }}>Book An Appointment</button>
-            <button className="btn" style={{ backgroundColor: "white", color: "#0A2540", border: "none" }}>Contact Support</button>
+      <section className="py-20 md:py-24 bg-healing-emerald text-white text-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl mix-blend-overlay"></div>
+        
+        <div className="max-w-3xl mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-display-lg mb-6">Ready to Experience Care?</h2>
+          <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-body-md">Schedule a visit or consult with our experts today to start your journey towards better health.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="bg-clinical-blue text-white font-label-md px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+              Book An Appointment
+            </a>
+            <a href="tel:04029329999" className="bg-white text-clinical-blue font-label-md px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+              Contact Support
+            </a>
           </div>
         </div>
       </section>
