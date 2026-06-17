@@ -1,5 +1,6 @@
-import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Play, Phone, HeartPulse, Brain, Microscope, Bone } from "lucide-react";
+import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Phone, HeartPulse, Brain, Microscope, Bone, Users, Award, Clock } from "lucide-react";
 import InsurancePartners from "@/components/InsurancePartners";
+import TestimonialVideo from "@/components/TestimonialVideo";
 
 const testimonials = [
   {
@@ -74,10 +75,10 @@ export default function HomePage() {
             <h3 className="font-headline-md text-headline-md text-clinical-blue">2nd Opinion</h3>
             <p className="text-label-sm font-label-sm text-on-surface-variant">Expert medical validation from senior specialists.</p>
           </div>
-          <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform bg-clinical-blue !text-white">
+          <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
             <Activity className="text-healing-emerald" size={36} />
-            <h3 className="font-headline-md text-headline-md">Emergency</h3>
-            <p className="text-label-sm font-label-sm text-surface-container-low opacity-80">24/7 Critical Care: 040-29329999</p>
+            <h3 className="font-headline-md text-headline-md text-clinical-blue">Emergency</h3>
+            <p className="text-label-sm font-label-sm text-on-surface-variant">24/7 Critical Care: 040-29329999</p>
           </div>
         </div>
       </section>
@@ -201,22 +202,7 @@ export default function HomePage() {
           <div className="overflow-hidden w-full px-4 md:px-0 pb-8">
             <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6">
               {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <div key={index} className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0">
-                  <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster={testimonial.posterSrc} loop muted playsInline>
-                        <source src={testimonial.videoSrc} type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
-                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
-                        </div>
-                    </div>
-                  </div>
-                  <div className="p-6 bg-white border-t border-border-subtle">
-                      <p className="font-label-md text-clinical-blue mb-1">{testimonial.name}</p>
-                      <p className="text-label-sm text-on-surface-variant">{testimonial.condition}</p>
-                  </div>
-                </div>
+                <TestimonialVideo key={index} testimonial={testimonial} />
               ))}
             </div>
           </div>
@@ -227,24 +213,45 @@ export default function HomePage() {
       <InsurancePartners />
 
       {/* Impact Statistics */}
-      <section className="py-12 md:py-margin-desktop bg-clinical-blue text-white">
-        <div className="max-w-container-max mx-auto px-4 md:px-gutter">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="flex flex-col gap-2 animate-fadeIn">
-              <span className="text-display-lg font-display-lg text-healing-emerald">50k+</span>
-              <p className="text-label-md font-label-md text-surface-container-low opacity-70">Happy Patients</p>
+      <section className="relative py-16 md:py-24 bg-clinical-blue overflow-hidden border-t border-white/10">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+          <div className="absolute -top-[50%] -left-[10%] w-[60%] h-[150%] rounded-full bg-healing-emerald/10 blur-[120px]"></div>
+          <div className="absolute -bottom-[50%] -right-[10%] w-[60%] h-[150%] rounded-full bg-hospital-teal/20 blur-[150px]"></div>
+        </div>
+        
+        <div className="max-w-container-max mx-auto px-4 md:px-gutter relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group shadow-2xl flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-healing-emerald/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-healing-emerald/30 transition-all duration-500 shadow-[0_0_30px_rgba(0,168,107,0.2)]">
+                <Users className="text-healing-emerald" size={32} />
+              </div>
+              <h3 className="text-5xl md:text-6xl font-display-lg text-white mb-2 tracking-tight">50k+</h3>
+              <p className="text-label-md font-label-md text-surface-container-low opacity-80 uppercase tracking-widest mt-2">Happy Patients</p>
             </div>
-            <div className="flex flex-col gap-2 animate-fadeIn">
-              <span className="text-display-lg font-display-lg text-healing-emerald">12+</span>
-              <p className="text-label-md font-label-md text-surface-container-low opacity-70">Years Experience</p>
+            
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group shadow-2xl flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-healing-emerald/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-healing-emerald/30 transition-all duration-500 shadow-[0_0_30px_rgba(0,168,107,0.2)]">
+                <Award className="text-healing-emerald" size={32} />
+              </div>
+              <h3 className="text-5xl md:text-6xl font-display-lg text-white mb-2 tracking-tight">12+</h3>
+              <p className="text-label-md font-label-md text-surface-container-low opacity-80 uppercase tracking-widest mt-2">Years Experience</p>
             </div>
-            <div className="flex flex-col gap-2 animate-fadeIn">
-              <span className="text-display-lg font-display-lg text-healing-emerald">100+</span>
-              <p className="text-label-md font-label-md text-surface-container-low opacity-70">Expert Doctors</p>
+            
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group shadow-2xl flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-healing-emerald/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-healing-emerald/30 transition-all duration-500 shadow-[0_0_30px_rgba(0,168,107,0.2)]">
+                <Stethoscope className="text-healing-emerald" size={32} />
+              </div>
+              <h3 className="text-5xl md:text-6xl font-display-lg text-white mb-2 tracking-tight">100+</h3>
+              <p className="text-label-md font-label-md text-surface-container-low opacity-80 uppercase tracking-widest mt-2">Expert Doctors</p>
             </div>
-            <div className="flex flex-col gap-2 animate-fadeIn">
-              <span className="text-display-lg font-display-lg text-healing-emerald">24/7</span>
-              <p className="text-label-md font-label-md text-surface-container-low opacity-70">Emergency Care</p>
+            
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group shadow-2xl flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-healing-emerald/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-healing-emerald/30 transition-all duration-500 shadow-[0_0_30px_rgba(0,168,107,0.2)]">
+                <Clock className="text-healing-emerald" size={32} />
+              </div>
+              <h3 className="text-5xl md:text-6xl font-display-lg text-white mb-2 tracking-tight">24/7</h3>
+              <p className="text-label-md font-label-md text-surface-container-low opacity-80 uppercase tracking-widest mt-2">Emergency Care</p>
             </div>
           </div>
         </div>

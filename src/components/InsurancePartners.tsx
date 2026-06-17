@@ -24,7 +24,7 @@ export default function InsurancePartners() {
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-8 md:gap-12 px-4 md:px-8 items-center">
           {[...insurancePartners, ...insurancePartners].map((imgSrc, idx) => (
             <div key={idx} className="flex-shrink-0 bg-white shadow-sm border border-border-subtle rounded-xl p-4 w-[160px] h-[80px] md:w-[200px] md:h-[100px] flex items-center justify-center hover:shadow-md transition-shadow">
-              <img src={imgSrc} alt={`Insurance Partner ${idx + 1}`} className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <img src={imgSrc} alt={`Insurance Partner ${idx + 1}`} className="max-w-full max-h-full object-contain transition-all duration-300" />
             </div>
           ))}
         </div>

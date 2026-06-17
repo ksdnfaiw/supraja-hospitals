@@ -1,4 +1,5 @@
-import { MapPin, Phone, MessageCircle, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -29,7 +30,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal flex-shrink-0">
-                  <Phone size={24} />
+                  <FaPhoneAlt size={24} />
                 </div>
                 <div>
                   <h4 className="font-headline-md text-xl text-clinical-blue mb-1">24/7 Emergency Line</h4>
@@ -38,7 +39,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-hospital-teal/10 flex items-center justify-center text-hospital-teal flex-shrink-0">
-                  <MessageCircle size={24} />
+                  <FaWhatsapp size={24} />
                 </div>
                 <div>
                   <h4 className="font-headline-md text-xl text-clinical-blue mb-1">WhatsApp Consult</h4>
