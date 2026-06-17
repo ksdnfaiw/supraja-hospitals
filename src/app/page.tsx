@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 w-full [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0">
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
                 <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.jpg" loop muted playsInline>
                         <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
@@ -189,7 +189,7 @@ export default function HomePage() {
             </div>
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
                 <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.jpg" loop muted playsInline>
                         <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
@@ -205,7 +205,7 @@ export default function HomePage() {
             </div>
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
                 <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.jpg" loop muted playsInline>
                         <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
@@ -222,7 +222,7 @@ export default function HomePage() {
             {/* Shoba Testimonial */}
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
                 <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.jpg" loop muted playsInline>
                         <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
