@@ -1,4 +1,5 @@
 import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Play, Phone, HeartPulse, Brain, Microscope, Bone } from "lucide-react";
+import InsurancePartners from "@/components/InsurancePartners";
 
 const testimonials = [
   {
@@ -221,6 +222,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Insurance Partners */}
+      <InsurancePartners />
 
       {/* Impact Statistics */}
       <section className="py-12 md:py-margin-desktop bg-clinical-blue text-white">

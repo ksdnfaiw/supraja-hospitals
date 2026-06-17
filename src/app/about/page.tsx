@@ -1,3 +1,5 @@
+import InsurancePartners from "@/components/InsurancePartners";
+
 export default function AboutPage() {
   return (
     <div className="about-page">
@@ -184,7 +186,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 8. Green CTA Strip */}
+      {/* 8. Insurance Partners */}
+      <InsurancePartners />
+
+      {/* 9. Green CTA Strip */}
       <section style={{ backgroundColor: "var(--secondary)", padding: "4rem 2rem", textAlign: "center", color: "white" }}>
         <div className="container">
           <h2 style={{ marginBottom: "1rem" }}>Ready to Experience Care?</h2>
