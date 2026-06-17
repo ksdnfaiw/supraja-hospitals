@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Play, Phone } from "lucide-react";
+import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Play, Phone, HeartPulse, Brain, Microscope, Bone } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -68,7 +68,9 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
-              <img alt="Cardiology" className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida/AP1WRLvyk5uGqNT4_8ho-X-dxtGL9INCAxMnJwWGl5IFl0ykYWoYV2fsTAJ5P0gh_HvgT7-8k8yZiibQjKtuR2VAhegcMUi6fMlMShK4454BG31bpJc01qNzx0Sj2ZxYB-eMtpXHDhMraNC_Sfl-MCtPoZL3DBtAi-O4EhTSYx4hFAskskaZ_5c2cwwBVeoeR6Gace2iuKys2sbZzLhnD-fm7gh21EDDu_x_Zt6Kkbsm6Wi7IJb9INV2yHeSIlN6" />
+              <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
+                <HeartPulse className="text-hospital-teal" size={32} />
+              </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Cardiology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Comprehensive cardiac care including advanced bypass surgeries and interventions.</p>
               <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
@@ -76,7 +78,9 @@ export default function HomePage() {
               </a>
             </div>
             <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
-              <img alt="Neurology" className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida/AP1WRLuNYbbDLsVkosTFGVtWpOX2lPTUYWoiKckXG9oscGpM0tYGUvj_fe3VJsDmpVmXNzL9y3dnWTrBYmPB38_w-nNaaTpSGy460F9KWroHPSVI1i3ZdrEdnDjo6_0Z-OzAoCkyrrIsoLuMLA9xDZ0Ug_ywGJXeeh_GKPH794j8PlI91XckGrJH_JBHvwSnMwkdIUFWocaVJyAgWFUoD2ZmkNG7gDifBIbKbow3MduntVfFNu2eT_smhEYm3DQD" />
+              <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
+                <Brain className="text-hospital-teal" size={32} />
+              </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Neurology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Expert treatment for neurological disorders and advanced neuro-spine surgeries.</p>
               <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
@@ -84,19 +88,23 @@ export default function HomePage() {
               </a>
             </div>
             <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
-              <img alt="Oncology" className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida/AP1WRLsfOviajZJWkGy1Ov99ndVUeYEdTCjGtaIMto3ipvYxUoVI04JchCEBjcqUPtHmynTbRpLBZkABVW8D4UBOn-cN6YVRTAkVm7MPBsfvqyTyLLkWv74vQlf5Rkyw6xxo-ISt6g9kD-FHMw4BhBNykpFMSu9bPNrBQXoJD4lbS0NiXWzP4WAD_IDqc0GQTeBKxDMSVYM04E_zYn1qbTqJWwgd70Jlh_lCVIModrHtwcVROkmh0gkke8aMGYw" />
+              <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
+                <Microscope className="text-hospital-teal" size={32} />
+              </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Oncology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Advanced surgical and medical oncology protocols for precise cancer treatments.</p>
               <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
-                View Details <span className="material-symbols-outlined">chevron_right</span>
+                View Details <ChevronRight size={18} />
               </a>
             </div>
             <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
-              <img alt="Orthopedics" className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida/AP1WRLuXDLlj7vHwCcZqHdW2nshQVglebTfd4sutIQhGnPprHpPnjYWP9jEnUpEq8qdWxRpdEhyy6xtfXUmis_ibWU1CXLNlAKGRqJWINiX47o5TuFK04H0nuy-D_SjOozUpsy4HKQJt0yH35hVCDS3GGgW7pVo2JSvRwEJHkbczVaXW5kd6zFdGWxMiXbJZjSNPJA_b9wRC5y7Otj1NfuaP1EJ_HtV5g2uShIGyTxvlADN9RE3o0AQ3XmS1_2oN" />
+              <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
+                <Bone className="text-hospital-teal" size={32} />
+              </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Orthopedics</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Modern orthopedic procedures including joint replacement and trauma care.</p>
               <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
-                View Details <span className="material-symbols-outlined">chevron_right</span>
+                View Details <ChevronRight size={18} />
               </a>
             </div>
           </div>
@@ -162,47 +170,70 @@ export default function HomePage() {
             <h2 className="font-display-lg text-display-lg text-clinical-blue mb-4">Our Patients Love Us</h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Hear from those who have experienced our care firsthand.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <div className="aspect-video bg-clinical-blue/20 relative">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" alt="Patient Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 w-full [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0">
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
+                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.mp4" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                             <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
                 </div>
                 <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Ramesh K.</p>
+                    <p className="font-label-md text-clinical-blue mb-1">Lalitha</p>
                     <p className="text-label-sm text-on-surface-variant">Cardiac Surgery Recovery</p>
                 </div>
             </div>
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <div className="aspect-video bg-clinical-blue/20 relative">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" alt="Patient Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors">
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
+                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.mp4" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                             <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
                 </div>
                 <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Sangeeta M.</p>
+                    <p className="font-label-md text-clinical-blue mb-1">Krishnam Raju</p>
                     <p className="text-label-sm text-on-surface-variant">Neurological Care Journey</p>
                 </div>
             </div>
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <div className="aspect-video bg-clinical-blue/20 relative">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" alt="Patient Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors">
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
+                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.mp4" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                             <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
                 </div>
                 <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Anjali P.</p>
+                    <p className="font-label-md text-clinical-blue mb-1">G. Latha</p>
                     <p className="text-label-sm text-on-surface-variant">Maternity Care Experience</p>
+                </div>
+            </div>
+            {/* Added one more to show scrollability */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
+                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1582750433449-648ed127c09e?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                        <source src="" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
+                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
+                        </div>
+                    </div>
+                </div>
+                <div className="p-6 bg-white border-t border-border-subtle">
+                    <p className="font-label-md text-clinical-blue mb-1">Karthik R.</p>
+                    <p className="text-label-sm text-on-surface-variant">Orthopedic Rehabilitation</p>
                 </div>
             </div>
           </div>
