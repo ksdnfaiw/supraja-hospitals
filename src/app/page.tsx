@@ -1,5 +1,32 @@
 import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Play, Phone, HeartPulse, Brain, Microscope, Bone } from "lucide-react";
 
+const testimonials = [
+  {
+    name: "Lalitha",
+    condition: "Cardiac Surgery Recovery",
+    videoSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.mp4",
+    posterSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.jpg"
+  },
+  {
+    name: "Krishnam Raju",
+    condition: "Neurological Care Journey",
+    videoSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.mp4",
+    posterSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.jpg"
+  },
+  {
+    name: "G. Latha",
+    condition: "Maternity Care Experience",
+    videoSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.mp4",
+    posterSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.jpg"
+  },
+  {
+    name: "Shoba",
+    condition: "Brain Surgery Recovery",
+    videoSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.mp4",
+    posterSrc: "https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.jpg"
+  }
+];
+
 export default function HomePage() {
   return (
     <>
@@ -170,71 +197,26 @@ export default function HomePage() {
             <h2 className="font-display-lg text-display-lg text-clinical-blue mb-4">Our Patients Love Us</h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Hear from those who have experienced our care firsthand.</p>
           </div>
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 w-full [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0">
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
-                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.jpg" loop muted playsInline>
-                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781695281/Copy_of_Lalitha_testi_Final_01_usg5fu.mp4" type="video/mp4" />
+          <div className="overflow-hidden w-full px-4 md:px-0 pb-8">
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6">
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <div key={index} className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0">
+                  <div className="aspect-[9/16] bg-clinical-blue/20 relative">
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster={testimonial.posterSrc} loop muted playsInline>
+                        <source src={testimonial.videoSrc} type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                             <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
                         </div>
                     </div>
+                  </div>
+                  <div className="p-6 bg-white border-t border-border-subtle">
+                      <p className="font-label-md text-clinical-blue mb-1">{testimonial.name}</p>
+                      <p className="text-label-sm text-on-surface-variant">{testimonial.condition}</p>
+                  </div>
                 </div>
-                <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Lalitha</p>
-                    <p className="text-label-sm text-on-surface-variant">Cardiac Surgery Recovery</p>
-                </div>
-            </div>
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
-                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.jpg" loop muted playsInline>
-                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781696670/Copy_of_Kirhnam_raju_testi_njctym.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
-                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
-                        </div>
-                    </div>
-                </div>
-                <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Krishnam Raju</p>
-                    <p className="text-label-sm text-on-surface-variant">Neurological Care Journey</p>
-                </div>
-            </div>
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
-                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.jpg" loop muted playsInline>
-                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781699907/Copy_of_G.latha_testi_1_gadlur.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
-                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
-                        </div>
-                    </div>
-                </div>
-                <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">G. Latha</p>
-                    <p className="text-label-sm text-on-surface-variant">Maternity Care Experience</p>
-                </div>
-            </div>
-            {/* Shoba Testimonial */}
-            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
-                <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.jpg" loop muted playsInline>
-                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
-                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                            <Play className="text-clinical-blue fill-clinical-blue ml-1" size={32} />
-                        </div>
-                    </div>
-                </div>
-                <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Shoba</p>
-                    <p className="text-label-sm text-on-surface-variant">Brain Surgery Recovery</p>
-                </div>
+              ))}
             </div>
           </div>
         </div>
