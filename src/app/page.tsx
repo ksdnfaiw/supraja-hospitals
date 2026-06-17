@@ -219,11 +219,11 @@ export default function HomePage() {
                     <p className="text-label-sm text-on-surface-variant">Maternity Care Experience</p>
                 </div>
             </div>
-            {/* Added one more to show scrollability */}
+            {/* Shoba Testimonial */}
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[260px] md:min-w-[300px] w-[260px] md:w-[300px] flex-shrink-0 snap-center">
                 <div className="aspect-[9/16] bg-clinical-blue/20 relative">
-                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1582750433449-648ed127c09e?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
-                        <source src="" type="video/mp4" />
+                    <video className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" poster="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" loop muted playsInline>
+                        <source src="https://res.cloudinary.com/dizaawlyl/video/upload/v1781700783/Copy_of_Copy_of_Shoba_Brain_surgery_testi_Final_03_1_ss6jau.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-clinical-blue/40 flex items-center justify-center group-hover:bg-clinical-blue/20 transition-colors cursor-pointer">
                         <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
@@ -232,8 +232,8 @@ export default function HomePage() {
                     </div>
                 </div>
                 <div className="p-6 bg-white border-t border-border-subtle">
-                    <p className="font-label-md text-clinical-blue mb-1">Karthik R.</p>
-                    <p className="text-label-sm text-on-surface-variant">Orthopedic Rehabilitation</p>
+                    <p className="font-label-md text-clinical-blue mb-1">Shoba</p>
+                    <p className="text-label-sm text-on-surface-variant">Brain Surgery Recovery</p>
                 </div>
             </div>
           </div>
