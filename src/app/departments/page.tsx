@@ -22,7 +22,7 @@ export default function DepartmentsPage() {
             Precision medical care across advanced surgical and medical disciplines. Our highly specialized departments are equipped with world-class technology.
           </p>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #ffffff 2px, transparent 2px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_50%,#ffffff_2px,transparent_2px)] bg-[size:30px_30px]"></div>
       </section>
 
       {/* Grid Section */}
