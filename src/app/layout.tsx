@@ -50,8 +50,8 @@ export default function RootLayout({
                 <div className="space-y-4 pt-2">
                   <h5 className="font-bold uppercase tracking-widest text-sm text-white flex items-center gap-2"><span className="w-4 h-px bg-healing-emerald"></span> CONTACT US</h5>
                   <div className="space-y-3 text-sm text-surface-container-low/70">
-                    <div className="flex gap-3 items-start"><FaMapMarkerAlt size={18} className="text-healing-emerald mt-1 flex-shrink-0" /> <span className="leading-relaxed">Nagole X Road, Hyderabad<br/>Telangana, India</span></div>
-                    <div className="flex gap-3 items-center"><FaPhoneAlt size={16} className="text-healing-emerald flex-shrink-0" /> 040-29329999</div>
+                    <div className="flex gap-3 items-start"><FaMapMarkerAlt size={18} className="text-healing-emerald mt-1 flex-shrink-0" /> <a href="https://share.google/qIY1rsj5ErfwXMV8C" target="_blank" rel="noopener noreferrer" className="leading-relaxed hover:text-healing-emerald transition-colors">X roads, Nagole, Hyderabad<br/>Telangana 500068</a></div>
+                    <div className="flex gap-3 items-center"><FaPhoneAlt size={16} className="text-healing-emerald flex-shrink-0" /> 9281038297/8, 040-29329999</div>
                     <div className="flex gap-3 items-center"><FaWhatsapp size={18} className="text-[#25D366] flex-shrink-0" /> 9281038298</div>
                     <div className="flex gap-3 items-center"><FaEnvelope size={16} className="text-healing-emerald flex-shrink-0" /> info@suprajahospitals.com</div>
                   </div>

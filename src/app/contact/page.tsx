@@ -25,7 +25,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-headline-md text-xl text-clinical-blue mb-1">Our Location</h4>
-                  <p className="font-body-md text-on-surface-variant">Nagole X Road, Hyderabad,<br />Telangana, India - 500068</p>
+                  <p className="font-body-md text-on-surface-variant">X roads, Nagole, Hyderabad,<br />Telangana 500068</p>
+                  <a href="https://share.google/qIY1rsj5ErfwXMV8C" target="_blank" rel="noopener noreferrer" className="text-hospital-teal font-label-sm hover:underline mt-2 inline-block">View on Google Maps</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -33,8 +34,8 @@ export default function ContactPage() {
                   <FaPhoneAlt size={24} />
                 </div>
                 <div>
-                  <h4 className="font-headline-md text-xl text-clinical-blue mb-1">24/7 Emergency Line</h4>
-                  <p className="font-body-md text-on-surface-variant text-2xl font-bold text-hospital-teal">040-29329999</p>
+                  <h4 className="font-headline-md text-xl text-clinical-blue mb-1">Call Us</h4>
+                  <p className="font-body-md text-on-surface-variant text-xl font-bold text-hospital-teal">9281038297/8, 040-29329999</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
