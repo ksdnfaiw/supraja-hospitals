@@ -13,10 +13,7 @@ export default function GalleryPage() {
     "1551076805-e1869033e561",
     "1538108149393-fbbd81895907",
     "1516549655169-df83a0774514",
-    "1579684385127-1ef15d508118",
-    "1504439468489-c8920d796a29",
-    "1582719508461-905c673771fd",
-    "1638202993928-7267aad84c31"
+    "1579684385127-1ef15d508118"
   ];
 
   // Generate 20+ images using the ids above to populate the grid
