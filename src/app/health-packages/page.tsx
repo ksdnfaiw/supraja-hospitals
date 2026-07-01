@@ -32,9 +32,13 @@ export default function HealthPackagesPage() {
   return (
     <div className="bg-surface-gray min-h-screen">
       <section className="bg-clinical-blue text-white py-24 px-gutter relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[url('/images/health_packages_hero.png')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-clinical-blue via-clinical-blue/80 to-clinical-blue/20"></div>
+        </div>
         <div className="max-w-container-max mx-auto relative z-10 text-center">
-          <h1 className="font-display-lg text-display-lg mb-6">Preventive <span className="text-healing-emerald">Health Packages</span></h1>
-          <p className="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto opacity-90">
+          <h1 className="font-display-lg text-display-lg mb-6 drop-shadow-md">Preventive <span className="text-healing-emerald">Health Packages</span></h1>
+          <p className="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto opacity-100 drop-shadow-md">
             Proactive healthcare tailored for you. Choose from our specialized screening packages to stay ahead of potential health risks.
           </p>
         </div>

@@ -1,6 +1,11 @@
+"use client";
+
 import { ArrowRight, Calendar, TestTube, Stethoscope, Activity, ChevronRight, Check, Phone, HeartPulse, Brain, Microscope, Bone, Users, Award, Clock } from "lucide-react";
 import InsurancePartners from "@/components/InsurancePartners";
 import TestimonialVideo from "@/components/TestimonialVideo";
+import Link from "next/link";
+import BookVisitModal from "@/components/BookVisitModal";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -30,28 +35,37 @@ const testimonials = [
 ];
 
 export default function HomePage() {
+  const [isBookVisitOpen, setIsBookVisitOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[80vh] md:h-[85vh] min-h-[500px] md:min-h-[600px] overflow-hidden -mt-[80px]">
+      <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden bg-clinical-blue -mt-[80px]">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-clinical-blue relative overflow-hidden bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5')] bg-cover bg-center">
-          </div>
-          <div className="absolute inset-0 hero-gradient"></div>
+          <div className="absolute inset-0 bg-[url('/images/new_hero_bg.png')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-clinical-blue via-clinical-blue/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-clinical-blue via-transparent to-transparent"></div>
         </div>
-        <div className="relative z-10 max-w-container-max mx-auto h-full px-4 md:px-gutter flex flex-col justify-center items-start pt-[100px]">
-          <div className="max-w-2xl text-white">
-            <h1 className="font-display-lg text-display-lg mb-4">Clinical Excellence,<br/><span className="text-healing-emerald">Compassionate Care</span></h1>
-            <p className="font-body-lg text-body-lg text-surface-container-low mb-8 opacity-90">
-              Experience world-class healthcare with 12+ years of surgical precision and holistic patient well-being at Hyderabad's leading multi-specialty destination.
+        
+        <div className="absolute inset-0 flex items-center z-10 px-4 md:px-gutter max-w-container-max mx-auto">
+          <div className="max-w-3xl text-left">
+            <div className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white font-label-sm tracking-widest uppercase mb-6 backdrop-blur-md animate-in slide-in-from-bottom-8 duration-700 fade-in">
+              World-Class Healthcare
+            </div>
+            <h1 className="font-display-lg text-4xl md:text-5xl lg:text-7xl text-white mb-6 leading-[1.1] animate-in slide-in-from-bottom-8 duration-700 delay-150 fade-in fill-mode-backwards drop-shadow-lg">
+              Clinical <span className="text-healing-emerald">Excellence,</span><br/>Compassionate <span className="text-healing-emerald">Care.</span>
+            </h1>
+            <p className="font-body-lg text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl animate-in slide-in-from-bottom-8 duration-700 delay-300 fade-in fill-mode-backwards drop-shadow-md">
+              Experience world-class healthcare with state-of-the-art oncology, advanced infrastructure, and 24/7 dedicated patient care.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-hospital-teal text-white font-label-md text-label-md px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-all flex items-center gap-2">
-                Find a Doctor <ArrowRight size={18} />
-              </button>
-              <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-white/20 transition-all">
-                Our Specialties
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom-8 duration-700 delay-500 fade-in fill-mode-backwards">
+              <a href="/contact" className="bg-healing-emerald text-white px-8 py-4 rounded-xl font-label-lg text-lg shadow-xl hover:bg-white hover:text-clinical-blue transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2">
+                Book Consultation <ArrowRight size={20} />
+              </a>
+              <a href="/departments" className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-label-lg text-lg flex items-center justify-center hover:bg-white/20 transition-all backdrop-blur-sm">
+                View Specialties
+              </a>
             </div>
           </div>
         </div>
@@ -60,16 +74,16 @@ export default function HomePage() {
       {/* Quick Actions Bento Grid */}
       <section className="max-w-container-max mx-auto px-4 md:px-gutter -mt-8 md:-mt-16 relative z-20 mb-12 md:mb-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
+          <button onClick={() => setIsBookVisitOpen(true)} className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform w-full">
             <Calendar className="text-clinical-blue" size={36} />
             <h3 className="font-headline-md text-headline-md text-clinical-blue">Book Visit</h3>
             <p className="text-label-sm font-label-sm text-on-surface-variant">Schedule your consultation instantly online.</p>
-          </div>
-          <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
+          </button>
+          <Link href="/health-packages" className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
             <TestTube className="text-clinical-blue" size={36} />
             <h3 className="font-headline-md text-headline-md text-clinical-blue">Diagnostics</h3>
             <p className="text-label-sm font-label-sm text-on-surface-variant">Access pathology & imaging reports easily.</p>
-          </div>
+          </Link>
           <div className="glass-card p-6 rounded-xl shadow-xl flex flex-col items-center text-center gap-3 border border-white hover:-translate-y-1 transition-transform">
             <Stethoscope className="text-clinical-blue" size={36} />
             <h3 className="font-headline-md text-headline-md text-clinical-blue">2nd Opinion</h3>
@@ -96,46 +110,46 @@ export default function HomePage() {
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
+            <Link href="/departments" className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300 block">
               <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
                 <HeartPulse className="text-hospital-teal" size={32} />
               </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Cardiology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Comprehensive cardiac care including advanced bypass surgeries and interventions.</p>
-              <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
+              <span className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 View Details <ChevronRight size={18} />
-              </a>
-            </div>
-            <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
+              </span>
+            </Link>
+            <Link href="/departments" className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300 block">
               <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
                 <Brain className="text-hospital-teal" size={32} />
               </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Neurology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Expert treatment for neurological disorders and advanced neuro-spine surgeries.</p>
-              <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
+              <span className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 View Details <ChevronRight size={18} />
-              </a>
-            </div>
-            <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
+              </span>
+            </Link>
+            <Link href="/departments" className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300 block">
               <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
                 <Microscope className="text-hospital-teal" size={32} />
               </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Oncology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Advanced surgical and medical oncology protocols for precise cancer treatments.</p>
-              <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
+              <span className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 View Details <ChevronRight size={18} />
-              </a>
-            </div>
-            <div className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300">
+              </span>
+            </Link>
+            <Link href="/departments" className="group bg-white p-8 rounded-xl border border-border-subtle hover:border-hospital-teal hover:shadow-xl transition-all duration-300 block">
               <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
                 <Bone className="text-hospital-teal" size={32} />
               </div>
               <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Orthopedics</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Modern orthopedic procedures including joint replacement and trauma care.</p>
-              <a className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">
+              <span className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 View Details <ChevronRight size={18} />
-              </a>
-            </div>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -146,7 +160,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                <img alt="Professional medical consultation" className="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgHcsxpDOZby8k4LHbL3GYa6J1FOcy9vZIa508Bj7dHhJqNRgsoiN37XJDaKnznUNe7b1630t_Qs2GsAx7goeoOVcbH5hjElCUmXMfjQILNajacDvw5fYmo06gxHMXkq-PgRSnjXUaCp-oIHgo-XD4Nc4HU8h3wj7DssQFCvsFcjBQpFILF6vmfbmtmpfo0eFr7yr6Wj5YddyYYtmDlCFtCh1W7OK8IJWhn6dUfiWvuHxd57xMYNzqZMa5d4VU2h1ByhywCxRzARP" />
+                <img alt="Supraja Hospitals Medical Team" className="w-full h-[500px] object-cover" src="/images/home_about_team.png" />
               </div>
               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-healing-emerald rounded-2xl flex flex-col items-center justify-center text-white p-6 shadow-xl z-20">
                 <span className="text-4xl font-bold">12+</span>
@@ -256,6 +270,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Book Visit Modal */}
+      <BookVisitModal isOpen={isBookVisitOpen} onClose={() => setIsBookVisitOpen(false)} />
     </>
   );
 }

@@ -71,16 +71,19 @@ export default function RootLayout({
                 </div>
               </div>
 
-              {/* CoE Links */}
+              {/* Specialties Links */}
               <div className="lg:col-span-2 space-y-6">
                 <div>
-                  <h5 className="font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-3 mb-6 inline-block">CENTERS OF EXCELLENCE</h5>
+                  <h5 className="font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-3 mb-6 inline-block">OUR SPECIALTIES</h5>
                   <ul className="space-y-3 text-sm text-surface-container-low/70">
-                    <li><a href="#" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Cardiothoracic</a></li>
-                    <li><a href="#" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Neurology</a></li>
-                    <li><a href="#" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Oncology</a></li>
-                    <li><a href="#" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Orthopedics</a></li>
-                    <li><a href="#" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Gastroenterology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Cardiology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Neurology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Oncology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Orthopedics</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Pediatrics</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Ophthalmology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Internal Medicine</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">General Surgery</a></li>
                   </ul>
                 </div>
               </div>

@@ -7,7 +7,7 @@ export default function AboutPage() {
       {/* 1. Hero Section */}
       <section className="relative w-full py-24 md:py-32 overflow-hidden bg-clinical-blue -mt-[80px]">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOC_vXKhvc_1-2wqgchaS1p4TbJyIl99sTe7JNoqRVSOC5XeDeL0ODP_kbAW3HwYTMkSt5hpiDmKcYb5CqA3aiE6uoHjBJ6GRz53QWLLZqF285fP-GihSLxtIvvZOM_AJzY1xYnzJZz40XzY27OuzHvXwuY4sVKYhDE3dkAsyNh_uMuhuyKEMKKDr9tvaCMQEhWxpS2LJ-9gZOmE4j6osHVD43zgvGhGFpG0z_AjEGe_YuLlRYmFq-HbfvEygiyXNSwFGZXkAYbYI5')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('/images/about_us_hero.png')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-clinical-blue via-clinical-blue/90 to-transparent"></div>
         </div>
         
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 </div>
                 <div className="relative">
                   <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-healing-emerald shadow-[0_0_15px_rgba(0,168,107,0.6)] border-4 border-clinical-blue box-content"></div>
-                  <div className="text-healing-emerald font-bold tracking-wider mb-1 text-sm uppercase">2010s</div>
+                  <div className="text-healing-emerald font-bold tracking-wider mb-1 text-sm uppercase">2020</div>
                   <h4 className="text-xl font-display-sm mb-2 text-white">Strategic Pivot to Healthcare</h4>
                   <p className="text-surface-container-low/60 font-body-md">Identifying the critical need for high-quality clinical infrastructure.</p>
                 </div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-healing-emerald shadow-[0_0_15px_rgba(0,168,107,0.6)] border-4 border-clinical-blue box-content"></div>
                   <div className="text-healing-emerald font-bold tracking-wider mb-1 text-sm uppercase">Today</div>
                   <h4 className="text-xl font-display-sm mb-2 text-white">Supraja Hospitals Rising</h4>
-                  <p className="text-surface-container-low/60 font-body-md">Evolving into a 100-bed multi-specialty institution.</p>
+                  <p className="text-surface-container-low/60 font-body-md">Evolving into a 200 Beds multi-specialty institution.</p>
                 </div>
               </div>
             </div>
@@ -169,21 +169,23 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "100-Bed Facility", desc: "Comprehensive inpatient and outpatient services.", icon: Building2 },
-              { title: "Advanced OTs", desc: "Modular Operation Theaters equipped for complex surgeries.", icon: Activity },
-              { title: "Cath Lab", desc: "Specialized cardiac unit for interventional procedures.", icon: Heart },
-              { title: "24/7 Emergency", desc: "Round-the-clock critical care with dedicated ambulances.", icon: Clock }
+              { title: "200 Beds Facility", desc: "Comprehensive inpatient and outpatient services.", icon: Building2, img: "/images/facility_image.png" },
+              { title: "Advanced OTs", desc: "Modular Operation Theaters equipped for complex surgeries.", icon: Activity, img: "/images/ot_image.png" },
+              { title: "Cath Lab", desc: "Specialized cardiac unit for interventional procedures.", icon: Heart, img: "/images/cath_lab_image.png" },
+              { title: "24/7 Emergency", desc: "Round-the-clock critical care with dedicated ambulances.", icon: Clock, img: "/images/emergency_image.png" }
             ].map((infra, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl bg-clinical-blue p-8 h-[280px] flex flex-col justify-end shadow-lg hover:-translate-y-2 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-t from-clinical-blue via-clinical-blue/80 to-clinical-blue/20 z-10"></div>
+                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" style={{ backgroundImage: `url(${infra.img})` }}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-clinical-blue via-clinical-blue/80 to-transparent z-10 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-clinical-blue via-clinical-blue/50 to-transparent z-10"></div>
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl -z-0 group-hover:scale-150 transition-transform duration-700"></div>
                 
                 <div className="relative z-20">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 text-healing-emerald backdrop-blur-sm border border-white/10 group-hover:-translate-y-2 transition-transform duration-500">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 text-healing-emerald backdrop-blur-sm border border-white/20 group-hover:-translate-y-2 transition-transform duration-500 shadow-lg">
                     <infra.icon size={24} />
                   </div>
-                  <h4 className="text-xl font-display-sm text-white mb-2">{infra.title}</h4>
-                  <p className="text-surface-container-low/70 text-sm leading-relaxed font-body-md">{infra.desc}</p>
+                  <h4 className="text-xl font-display-sm text-white mb-2 drop-shadow-md">{infra.title}</h4>
+                  <p className="text-surface-container-low/90 text-sm leading-relaxed font-body-md drop-shadow-sm">{infra.desc}</p>
                 </div>
               </div>
             ))}
