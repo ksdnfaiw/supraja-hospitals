@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, Calendar, User, Phone, Mail, Clock, FileText } from "lucide-react";
+import { X, Calendar, User, Phone, Mail, Clock, FileText, Check } from "lucide-react";
 
 export default function BookVisitModal({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
   const [formData, setFormData] = useState({
