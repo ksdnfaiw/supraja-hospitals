@@ -71,7 +71,7 @@ export default function HeroCarousel() {
             <div className="max-w-container-max mx-auto px-4 md:px-gutter w-full relative z-20">
               <div className="max-w-3xl transform transition-all duration-1000 delay-300 translate-y-0 opacity-100">
                 <div className={`transition-all duration-1000 ${index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                  <h1 className="font-display-lg text-4xl md:text-5xl lg:text-7xl text-white mb-6 leading-[1.1] drop-shadow-xl">
+                  <h1 className="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white mb-4 md:mb-6 leading-[1.1] drop-shadow-xl">
                     {slide.title.split(' ').map((word, i) => 
                       // Highlight specific words based on slide
                       (slide.id === 1 && word === "Infrastructure") || 
@@ -81,12 +81,12 @@ export default function HeroCarousel() {
                         : <span key={i}>{word} </span>
                     )}
                   </h1>
-                  <p className="font-body-lg text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl drop-shadow-md">
+                  <p className="font-body-lg text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-10 max-w-2xl drop-shadow-md">
                     {slide.subtitle}
                   </p>
                   <Link 
                     href={slide.ctaLink}
-                    className="inline-flex items-center justify-center bg-healing-emerald text-white px-8 py-4 rounded-xl font-label-lg text-lg shadow-xl hover:bg-white hover:text-clinical-blue transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center justify-center bg-healing-emerald text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-label-lg text-base md:text-lg shadow-xl hover:bg-white hover:text-clinical-blue transition-all duration-300 hover:-translate-y-1"
                   >
                     {slide.ctaText}
                   </Link>
@@ -100,14 +100,14 @@ export default function HeroCarousel() {
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/20 hover:scale-110"
+        className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/20 hover:scale-110"
         aria-label="Previous slide"
       >
         <ChevronLeft size={32} />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/20 hover:scale-110"
+        className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/20 hover:scale-110"
         aria-label="Next slide"
       >
         <ChevronRight size={32} />
