@@ -5,6 +5,7 @@ import InsurancePartners from "@/components/InsurancePartners";
 import TestimonialVideo from "@/components/TestimonialVideo";
 import Link from "next/link";
 import BookVisitModal from "@/components/BookVisitModal";
+import HeroCarousel from "@/components/HeroCarousel";
 import { useState } from "react";
 
 const testimonials = [
@@ -39,37 +40,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden bg-clinical-blue -mt-[80px]">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('/images/new_hero_bg.png')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-clinical-blue via-clinical-blue/80 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-clinical-blue via-transparent to-transparent"></div>
-        </div>
-        
-        <div className="absolute inset-0 flex items-center z-10 px-4 md:px-gutter max-w-container-max mx-auto">
-          <div className="max-w-3xl text-left">
-            <div className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white font-label-sm tracking-widest uppercase mb-6 backdrop-blur-md animate-in slide-in-from-bottom-8 duration-700 fade-in">
-              World-Class Healthcare
-            </div>
-            <h1 className="font-display-lg text-4xl md:text-5xl lg:text-7xl text-white mb-6 leading-[1.1] animate-in slide-in-from-bottom-8 duration-700 delay-150 fade-in fill-mode-backwards drop-shadow-lg">
-              Clinical <span className="text-healing-emerald">Excellence,</span><br/>Compassionate <span className="text-healing-emerald">Care.</span>
-            </h1>
-            <p className="font-body-lg text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl animate-in slide-in-from-bottom-8 duration-700 delay-300 fade-in fill-mode-backwards drop-shadow-md">
-              Experience world-class healthcare with state-of-the-art oncology, advanced infrastructure, and 24/7 dedicated patient care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom-8 duration-700 delay-500 fade-in fill-mode-backwards">
-              <a href="/contact" className="bg-healing-emerald text-white px-8 py-4 rounded-xl font-label-lg text-lg shadow-xl hover:bg-white hover:text-clinical-blue transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2">
-                Book Consultation <ArrowRight size={20} />
-              </a>
-              <a href="/departments" className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-label-lg text-lg flex items-center justify-center hover:bg-white/20 transition-all backdrop-blur-sm">
-                View Specialties
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section Carousel */}
+      <HeroCarousel />
 
       {/* Quick Actions Bento Grid */}
       <section className="max-w-container-max mx-auto px-4 md:px-gutter -mt-8 md:-mt-16 relative z-20 mb-12 md:mb-16">
