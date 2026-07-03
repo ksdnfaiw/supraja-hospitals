@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Activity, Heart, Brain, Bone, Stethoscope, Baby, Eye, Scissors } from "lucide-react";
+import { Menu, X, ChevronDown, Activity, Heart, Brain, Bone, Stethoscope, Baby, Eye, Scissors, Award } from "lucide-react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -108,7 +108,19 @@ export default function Header() {
             <NavLink href="/contact">Contact Us</NavLink>
           </div>
 
-          <div className="flex items-center gap-4 md:gap-6">
+          <div className="flex items-center gap-3 md:gap-6">
+            {/* Certifications - Responsive (Visible on mobile, tablet & desktop) */}
+            <div className="flex items-center gap-1.5 md:gap-2 mr-1 md:mr-0">
+              <div className="flex items-center gap-1 px-1.5 py-1 md:px-2 md:py-1 bg-surface-gray/30 rounded border border-border-subtle hover:bg-surface-gray/50 transition-colors cursor-default" title="NABH Accredited">
+                <Award className="text-hospital-teal w-3 h-3 md:w-3.5 md:h-3.5" />
+                <span className="text-[9px] md:text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-none mt-[1px]">NABH</span>
+              </div>
+              <div className="flex items-center gap-1 px-1.5 py-1 md:px-2 md:py-1 bg-surface-gray/30 rounded border border-border-subtle hover:bg-surface-gray/50 transition-colors cursor-default" title="NABL Accredited">
+                <Award className="text-hospital-teal w-3 h-3 md:w-3.5 md:h-3.5" />
+                <span className="text-[9px] md:text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-none mt-[1px]">NABL</span>
+              </div>
+            </div>
+
             <div className="hidden xl:flex flex-col items-end">
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Emergency 24/7</span>
               <a className="text-headline-md font-headline-md font-bold text-clinical-blue" href="tel:040-29329999">040-29329999</a>
