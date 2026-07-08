@@ -57,8 +57,8 @@ export default function Header() {
         <div className="bg-[#7f152a] text-white py-2 px-4 md:px-gutter flex justify-between items-center text-xs md:text-sm w-full">
            <div className="flex items-center gap-6 max-w-container-max mx-auto w-full">
               <div className="flex gap-6">
-                <span className="flex items-center gap-2 font-medium tracking-wide"><Award size={16} className="text-white/80"/> NABH Accredited</span>
-                <span className="flex items-center gap-2 font-medium tracking-wide"><Award size={16} className="text-white/80"/> NABL Accredited</span>
+                <span className="flex items-center gap-2 font-medium tracking-wide"><img src="/images/nabh.png" alt="NABH" className="h-8 w-auto bg-white rounded p-0.5" /> NABH Accredited</span>
+                <span className="flex items-center gap-2 font-medium tracking-wide"><img src="/images/nabl.png" alt="NABL" className="h-8 w-auto bg-white rounded p-0.5" /> NABL Accredited</span>
               </div>
               <div className="hidden sm:flex items-center gap-4 text-white/80 ml-auto">
                 <span>Providing World Class Healthcare</span>
