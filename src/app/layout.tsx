@@ -32,7 +32,7 @@ export default function RootLayout({
         </main>
 
         {/* Footer */}
-        <footer className="bg-primary text-white pt-16 pb-8 md:pt-24 md:pb-8 relative overflow-hidden border-t border-white/10">
+        <footer className="bg-[#7f152a] text-white pt-16 pb-8 md:pt-24 md:pb-8 relative overflow-hidden border-t border-white/10">
           {/* Subtle Background Glow */}
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-healing-emerald/50 to-transparent opacity-50"></div>
           

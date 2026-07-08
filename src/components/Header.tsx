@@ -54,7 +54,7 @@ export default function Header() {
     <>
       {/* Top Header Bar */}
       <header className="fixed top-0 left-0 w-full z-50 flex flex-col shadow-sm transition-all duration-300">
-        <div className="bg-primary text-white py-2 px-4 md:px-gutter flex justify-between items-center text-xs md:text-sm w-full">
+        <div className="bg-[#7f152a] text-white py-2 px-4 md:px-gutter flex justify-between items-center text-xs md:text-sm w-full">
            <div className="flex items-center gap-6 max-w-container-max mx-auto w-full">
               <div className="flex gap-6">
                 <span className="flex items-center gap-2 font-medium tracking-wide"><Award size={16} className="text-white/80"/> NABH Accredited</span>
