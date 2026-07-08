@@ -41,9 +41,7 @@ export default function RootLayout({
               
               {/* Brand & Contact Block */}
               <div className="lg:col-span-4 space-y-8">
-                <div>
-                  <img src="/images/logo.png" alt="Supraja Hospitals Logo" className="h-14 w-auto object-contain bg-white px-4 py-2 rounded-xl shadow-lg" />
-                </div>
+                  <img src="/images/logo.png" alt="Supraja Hospitals Logo" className="h-20 md:h-24 w-auto object-contain bg-white px-6 py-3 rounded-2xl shadow-lg" />
                 <div className="bg-hospital-teal/10 text-hospital-teal border border-hospital-teal/20 px-4 py-2 rounded-full inline-block font-label-md tracking-wide text-sm">Caring for your health is all we do</div>
                 <p className="text-surface-container-low/60 text-body-md leading-relaxed pr-4">At Supraja Hospitals, we strive to provide the best quality healthcare and the highest level of care to our patients through clinical excellence and compassion.</p>
                 
