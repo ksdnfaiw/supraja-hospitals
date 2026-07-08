@@ -32,7 +32,7 @@ export default function Header() {
     return (
       <Link 
         href={href} 
-        className={`font-label-md text-label-md transition-colors pb-1 ${isActive ? 'text-hospital-teal font-bold border-b-2 border-hospital-teal' : 'text-on-surface-variant hover:text-hospital-teal border-b-2 border-transparent'}`}
+        className={`font-label-md text-label-md transition-colors pb-1 whitespace-nowrap ${isActive ? 'text-hospital-teal font-bold border-b-2 border-hospital-teal' : 'text-on-surface-variant hover:text-hospital-teal border-b-2 border-transparent'}`}
       >
         {children}
       </Link>
@@ -52,8 +52,21 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Navigation */}
-      <nav id="main-nav" className="fixed top-0 left-0 w-full z-50 bg-white border-b border-border-subtle shadow-sm flex justify-between items-center px-4 md:px-gutter py-4 max-w-full transition-all duration-300">
+      {/* Top Header Bar */}
+      <header className="fixed top-0 left-0 w-full z-50 flex flex-col shadow-sm transition-all duration-300">
+        <div className="bg-primary text-white py-2 px-4 md:px-gutter flex justify-between items-center text-xs md:text-sm w-full">
+           <div className="flex items-center gap-6 max-w-container-max mx-auto w-full">
+              <div className="flex gap-6">
+                <span className="flex items-center gap-2 font-medium tracking-wide"><Award size={16} className="text-white/80"/> NABH Accredited</span>
+                <span className="flex items-center gap-2 font-medium tracking-wide"><Award size={16} className="text-white/80"/> NABL Accredited</span>
+              </div>
+              <div className="hidden sm:flex items-center gap-4 text-white/80 ml-auto">
+                <span>Providing World Class Healthcare</span>
+              </div>
+           </div>
+        </div>
+        {/* Main Navigation */}
+        <nav id="main-nav" className="bg-white border-b border-border-subtle flex justify-between items-center px-4 md:px-gutter py-4 w-full">
         <div className="max-w-container-max mx-auto w-full flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link href="/">
@@ -62,7 +75,7 @@ export default function Header() {
           </div>
           
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-8">
             <NavLink href="/">Home</NavLink>
             <div 
               className="relative"
@@ -71,7 +84,7 @@ export default function Header() {
             >
               <Link 
                 href="/departments"
-                className={`font-label-md text-label-md transition-colors flex items-center gap-1 cursor-pointer py-6 -my-6 border-b-2 ${pathname === '/departments' ? 'text-hospital-teal font-bold border-hospital-teal' : 'text-on-surface-variant hover:text-hospital-teal border-transparent'}`}
+                className={`font-label-md text-label-md transition-colors flex items-center gap-1 cursor-pointer py-6 -my-6 border-b-2 whitespace-nowrap ${pathname === '/departments' ? 'text-hospital-teal font-bold border-hospital-teal' : 'text-on-surface-variant hover:text-hospital-teal border-transparent'}`}
                 onClick={handleDropdownClick}
               >
                 Specialties <ChevronDown size={14} className={`transition-transform duration-300 ${isSpecialtiesOpen ? 'rotate-180 text-hospital-teal' : ''}`} />
@@ -108,24 +121,13 @@ export default function Header() {
             <NavLink href="/contact">Contact Us</NavLink>
           </div>
 
-          <div className="flex items-center gap-3 md:gap-6">
-            {/* Certifications - Responsive (Visible on mobile, tablet & desktop) */}
-            <div className="flex items-center gap-1.5 md:gap-2 mr-1 md:mr-0">
-              <div className="flex items-center gap-1 px-1.5 py-1 md:px-2 md:py-1 bg-surface-gray/30 rounded border border-border-subtle hover:bg-surface-gray/50 transition-colors cursor-default" title="NABH Accredited">
-                <Award className="text-hospital-teal w-3 h-3 md:w-3.5 md:h-3.5" />
-                <span className="text-[9px] md:text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-none mt-[1px]">NABH</span>
-              </div>
-              <div className="flex items-center gap-1 px-1.5 py-1 md:px-2 md:py-1 bg-surface-gray/30 rounded border border-border-subtle hover:bg-surface-gray/50 transition-colors cursor-default" title="NABL Accredited">
-                <Award className="text-hospital-teal w-3 h-3 md:w-3.5 md:h-3.5" />
-                <span className="text-[9px] md:text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-none mt-[1px]">NABL</span>
-              </div>
-            </div>
+          <div className="flex items-center gap-3 xl:gap-6">
 
-            <div className="hidden xl:flex flex-col items-end">
+            <div className="hidden lg:flex flex-col items-end whitespace-nowrap">
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Emergency 24/7</span>
               <a className="text-headline-md font-headline-md font-bold text-clinical-blue" href="tel:040-29329999">040-29329999</a>
             </div>
-            <Link href="/contact" className="hidden sm:block bg-healing-emerald text-white font-label-md text-label-md px-4 py-2 md:px-6 md:py-3 rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all">
+            <Link href="/contact" className="hidden sm:block bg-healing-emerald text-white font-label-md text-label-md px-4 py-2 xl:px-6 xl:py-3 rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all whitespace-nowrap">
               Book Appointment
             </Link>
             
@@ -140,15 +142,16 @@ export default function Header() {
           </div>
         </div>
       </nav>
+      </header>
 
       {/* Mobile Navigation Dropdown */}
       <div 
         className={`fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out lg:hidden ${
           isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ top: "72px" }} // offset by navbar height approx
+        style={{ top: "104px" }} // offset by navbar height approx
       >
-        <div className="flex flex-col p-6 gap-6 overflow-y-auto h-[calc(100vh-72px)]">
+        <div className="flex flex-col p-6 gap-6 overflow-y-auto h-[calc(100vh-104px)]">
           <div className="flex flex-col gap-4 border-b border-border-subtle pb-6">
             <Link className={`font-label-md text-lg ${pathname === '/' ? 'text-hospital-teal font-bold' : 'text-on-surface-variant'}`} href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
             <Link className={`font-label-md text-lg ${pathname === '/departments' ? 'text-hospital-teal font-bold' : 'text-on-surface-variant'}`} href="/departments" onClick={() => setIsMobileMenuOpen(false)}>Specialties</Link>
@@ -170,7 +173,7 @@ export default function Header() {
       </div>
       
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-[72px] md:h-[96px] w-full"></div>
+      <div className="h-[104px] md:h-[128px] w-full"></div>
     </>
   );
 }
