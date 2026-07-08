@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
-        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-surface-gray text-on-surface font-body-md overflow-x-hidden transition-colors duration-500">
@@ -42,7 +42,7 @@ export default function RootLayout({
               {/* Brand & Contact Block */}
               <div className="lg:col-span-4 space-y-8">
                 <div>
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnN_wqiAxqU3lcCCKow6VetNtWy4M2Ok6yC_qw9SJ_lmiv_ZHNHYFGH0OIpYHuuxfe9-5fOBNc3r-bHuMMPH6z6aispG8GS2_EO3CiLUGC4AaO2NYRAa5ul41zlVGxCsfHHVsQLqE_4Na_zO9d5COXoU3lX6ttN1-_imzOwoD6DhIQ7e2I0_EPjHnHaqeq_8_AghWAc-ZgcQRH4REhCJOTC9TVT-YF0zg1kQimRCiSSVuPqBzwkX8oiOuRteaf1bD4JtS4VE_iyKbd" alt="Supraja Hospitals Logo" className="h-14 w-auto object-contain bg-white px-4 py-2 rounded-xl shadow-lg" />
+                  <img src="/images/logo.png" alt="Supraja Hospitals Logo" className="h-14 w-auto object-contain bg-white px-4 py-2 rounded-xl shadow-lg" />
                 </div>
                 <div className="bg-hospital-teal/10 text-hospital-teal border border-hospital-teal/20 px-4 py-2 rounded-full inline-block font-label-md tracking-wide text-sm">Caring for your health is all we do</div>
                 <p className="text-surface-container-low/60 text-body-md leading-relaxed pr-4">At Supraja Hospitals, we strive to provide the best quality healthcare and the highest level of care to our patients through clinical excellence and compassion.</p>

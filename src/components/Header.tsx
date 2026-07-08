@@ -57,7 +57,7 @@ export default function Header() {
         <div className="max-w-container-max mx-auto w-full flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link href="/">
-              <img alt="Supraja Hospitals Logo" className="h-10 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmpCShrqjBNivLsDwdr7FHpoBlYJVYWXDyRH15TdmWVVXWj73jNtxBnz2Jv0JivPhlfyAIadxcaBUW8TzoQWb1sR1xcQ7aslugDpm6_71yZ1S_cLUO2MF5ot75J1Ms-PEOCCgoZt7-a411eu6H_fJj5zmuNE23pkELaSpRTx8sFHx-KVng9JuAQyM8AEKQPg9THR5c1G9qCPiVcJMVkRvJoWWfHOv51ZYfBt7Mz5nP0WEKzz7_fzptvniLPyOuj0_GZrVxuW3CGnFA" />
+              <img alt="Supraja Hospitals Logo" className="h-10 md:h-16 w-auto object-contain" src="/images/logo.png" />
             </Link>
           </div>
           
