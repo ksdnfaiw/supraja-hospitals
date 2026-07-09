@@ -1,15 +1,28 @@
-import { Heart, Brain, Baby, Activity, Bone, Eye, Stethoscope, Scissors } from "lucide-react";
+import { Heart, Brain, Baby, Activity, Bone, Eye, Stethoscope, Scissors, Users, Wind, Smile } from "lucide-react";
 
 export default function DepartmentsPage() {
   const departments = [
     { name: "Cardiology", desc: "Advanced cardiac care, bypass surgeries, and interventional cardiology.", icon: Heart },
-    { name: "Neurology", desc: "Expert treatment for neurological disorders and neuro-spine surgeries.", icon: Brain },
-    { name: "Pediatrics", desc: "Comprehensive child healthcare, neonatal intensive care, and vaccinations.", icon: Baby },
-    { name: "Emergency Medicine", desc: "24/7 critical care, trauma management, and rapid response unit.", icon: Activity },
+    { name: "Cardiothoracic Surgery", desc: "Surgical treatment of organs inside the thorax, including heart and lungs.", icon: Activity },
     { name: "Orthopedics", desc: "Modern joint replacements, sports injuries, and advanced trauma care.", icon: Bone },
-    { name: "Ophthalmology", desc: "State-of-the-art eye care, cataract surgery, and vision correction.", icon: Eye },
-    { name: "Internal Medicine", desc: "Comprehensive adult medicine, diagnostics, and preventive care.", icon: Stethoscope },
+    { name: "Gastroenterology", desc: "Comprehensive care for digestive system disorders.", icon: Stethoscope },
     { name: "General Surgery", desc: "Minimally invasive and laparoscopic surgical procedures.", icon: Scissors },
+    { name: "Oncology", desc: "Expert cancer care, chemotherapy, and advanced surgical oncology.", icon: Activity },
+    { name: "Gynecology", desc: "Complete women's health, maternity care, and gynecological surgeries.", icon: Users },
+    { name: "Pediatrics", desc: "Comprehensive child healthcare and vaccinations.", icon: Baby },
+    { name: "Neonatology", desc: "Specialized medical care for newborn infants, especially the ill or premature.", icon: Baby },
+    { name: "Kidney Transplantation", desc: "State-of-the-art renal transplant programs.", icon: Activity },
+    { name: "Nephrology", desc: "Advanced treatment for kidney diseases and dialysis care.", icon: Stethoscope },
+    { name: "Internal Medicine", desc: "Comprehensive adult medicine, diagnostics, and preventive care.", icon: Stethoscope },
+    { name: "Plastic Surgery", desc: "Reconstructive and cosmetic surgical procedures.", icon: Scissors },
+    { name: "Urology", desc: "Expert care for urinary tract system and male reproductive organs.", icon: Activity },
+    { name: "Physiotherapy", desc: "Rehabilitation, physical therapy, and mobility restoration.", icon: Activity },
+    { name: "Pulmonology", desc: "Diagnosis and treatment of respiratory tract diseases.", icon: Wind },
+    { name: "Dental", desc: "Comprehensive dental care, orthodontics, and oral surgery.", icon: Smile },
+    { name: "ENT", desc: "Ear, nose, and throat disorders treatment and surgeries.", icon: Stethoscope },
+    { name: "Emergency Medicine", desc: "24/7 critical care, trauma management, and rapid response unit.", icon: Activity },
+    { name: "Neurology", desc: "Expert treatment for neurological disorders and neuro-spine surgeries.", icon: Brain },
+    { name: "Ophthalmology", desc: "State-of-the-art eye care, cataract surgery, and vision correction.", icon: Eye },
   ];
 
   return (
