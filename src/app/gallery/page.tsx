@@ -6,23 +6,38 @@ import { Maximize2, X, Eye } from "lucide-react";
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // A mix of high-quality premium medical/hospital placeholders from Unsplash
-  const placeholderIds = [
-    "1581594693702-fbdc51b2763b",
-    "1519494026892-80bbd2d6fd0d",
-    "1551076805-e1869033e561",
-    "1538108149393-fbbd81895907",
-    "1516549655169-df83a0774514",
-    "1579684385127-1ef15d508118"
+  const images = [
+    {
+      id: 1,
+      url: "/images/gallery/gallery-1.png",
+      title: "Reception Area",
+      height: "h-[300px]"
+    },
+    {
+      id: 2,
+      url: "/images/gallery/gallery-2.jpg",
+      title: "Operating Theater Staff",
+      height: "h-[450px]"
+    },
+    {
+      id: 3,
+      url: "/images/gallery/gallery-3.jpg",
+      title: "CT Scan Facility",
+      height: "h-[350px]"
+    },
+    {
+      id: 4,
+      url: "/images/gallery/gallery-4.jpg",
+      title: "CT Scan Procedure",
+      height: "h-[300px]"
+    },
+    {
+      id: 5,
+      url: "/images/gallery/gallery-5.jpg",
+      title: "Advanced Radiology",
+      height: "h-[400px]"
+    }
   ];
-
-  // Generate 20+ images using the ids above to populate the grid
-  const images = Array.from({ length: 24 }).map((_, i) => ({
-    id: i,
-    url: `https://images.unsplash.com/photo-${placeholderIds[i % placeholderIds.length]}?auto=format&fit=crop&q=80&w=800`,
-    title: `Gallery Image ${i + 1}`,
-    height: i % 5 === 0 ? "h-[450px]" : i % 3 === 0 ? "h-[350px]" : "h-[250px]" // Randomize heights for masonry effect
-  }));
 
   return (
     <div className="bg-surface-gray min-h-screen">

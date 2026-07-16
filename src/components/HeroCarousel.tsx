@@ -9,7 +9,7 @@ const slides = [
     id: 1,
     title: "World-Class Healthcare Infrastructure",
     subtitle: "Experience precision and safety with our state-of-the-art 200-bed facility.",
-    image: "/images/hero_slide_1.png",
+    image: "/images/hero_building_ai.png",
     ctaText: "Explore Facilities",
     ctaLink: "/about"
   },
@@ -17,7 +17,7 @@ const slides = [
     id: 2,
     title: "Advanced Oncology Care & Beyond",
     subtitle: "Comprehensive cancer treatments with the latest medical technology.",
-    image: "/images/hero_slide_2.png",
+    image: "/images/hero_ct_scan_ai.png",
     ctaText: "View Specialties",
     ctaLink: "/departments"
   },
