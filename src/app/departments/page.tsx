@@ -2,27 +2,31 @@ import { Heart, Brain, Baby, Activity, Bone, Eye, Stethoscope, Scissors, Users, 
 
 export default function DepartmentsPage() {
   const departments = [
-    { name: "Cardiology", desc: "Advanced cardiac care, bypass surgeries, and interventional cardiology.", icon: Heart },
-    { name: "Cardiothoracic Surgery", desc: "Surgical treatment of organs inside the thorax, including heart and lungs.", icon: Activity },
-    { name: "Orthopedics", desc: "Modern joint replacements, sports injuries, and advanced trauma care.", icon: Bone },
-    { name: "Gastroenterology", desc: "Comprehensive care for digestive system disorders.", icon: Stethoscope },
-    { name: "General Surgery", desc: "Minimally invasive and laparoscopic surgical procedures.", icon: Scissors },
-    { name: "Oncology", desc: "Expert cancer care, chemotherapy, and advanced surgical oncology.", icon: Activity },
-    { name: "Gynecology", desc: "Complete women's health, maternity care, and gynecological surgeries.", icon: Users },
-    { name: "Pediatrics", desc: "Comprehensive child healthcare and vaccinations.", icon: Baby },
-    { name: "Neonatology", desc: "Specialized medical care for newborn infants, especially the ill or premature.", icon: Baby },
-    { name: "Kidney Transplantation", desc: "State-of-the-art renal transplant programs.", icon: Activity },
-    { name: "Nephrology", desc: "Advanced treatment for kidney diseases and dialysis care.", icon: Stethoscope },
-    { name: "Internal Medicine", desc: "Comprehensive adult medicine, diagnostics, and preventive care.", icon: Stethoscope },
-    { name: "Plastic Surgery", desc: "Reconstructive and cosmetic surgical procedures.", icon: Scissors },
-    { name: "Urology", desc: "Expert care for urinary tract system and male reproductive organs.", icon: Activity },
-    { name: "Physiotherapy", desc: "Rehabilitation, physical therapy, and mobility restoration.", icon: Activity },
+    { name: "General Medicine", desc: "Comprehensive adult medicine, diagnostics, and preventive care.", icon: Stethoscope },
     { name: "Pulmonology", desc: "Diagnosis and treatment of respiratory tract diseases.", icon: Wind },
-    { name: "Dental", desc: "Comprehensive dental care, orthodontics, and oral surgery.", icon: Smile },
-    { name: "ENT", desc: "Ear, nose, and throat disorders treatment and surgeries.", icon: Stethoscope },
-    { name: "Emergency Medicine", desc: "24/7 critical care, trauma management, and rapid response unit.", icon: Activity },
-    { name: "Neurology", desc: "Expert treatment for neurological disorders and neuro-spine surgeries.", icon: Brain },
-    { name: "Ophthalmology", desc: "State-of-the-art eye care, cataract surgery, and vision correction.", icon: Eye },
+    { name: "General & Laparoscopic Surgery", desc: "Minimally invasive and laparoscopic surgical procedures.", icon: Scissors },
+    { name: "Pediatrics & Neonatology", desc: "Comprehensive child healthcare, vaccinations, and specialized newborn care.", icon: Baby },
+    { name: "Orthopaedics", desc: "Modern joint replacements, sports injuries, and advanced trauma care.", icon: Bone },
+    { name: "Gynecology & Obstetrics", desc: "Complete women's health, maternity care, and gynecological surgeries.", icon: Users },
+    { name: "Critical Care & Polytrauma", desc: "24/7 intensive care, trauma management, and rapid response unit.", icon: Activity },
+    { name: "Dental & Maxillofacial Surgery", desc: "Comprehensive dental care, orthodontics, and oral surgery.", icon: Smile },
+    { name: "Joint Replacement Surgery", desc: "Advanced surgical procedures for knee, hip, and other joint replacements.", icon: Bone },
+    { name: "Radiology", desc: "Advanced imaging services including MRI, CT scan, X-Ray, and Ultrasound.", icon: Eye },
+    { name: "Psychiatry", desc: "Expert care for mental health, behavioral disorders, and emotional well-being.", icon: Brain },
+    { name: "Physiotherapy", desc: "Rehabilitation, physical therapy, and mobility restoration.", icon: Activity },
+    { name: "Gastroenterology", desc: "Comprehensive care for digestive system disorders.", icon: Stethoscope },
+    { name: "Urology", desc: "Expert care for urinary tract system and male reproductive organs.", icon: Activity },
+    { name: "Cardiology", desc: "Advanced cardiac care, bypass surgeries, and interventional cardiology.", icon: Heart },
+    { name: "Nephrology & Dialysis", desc: "Advanced treatment for kidney diseases and dialysis care.", icon: Stethoscope },
+    { name: "Neurology", desc: "Expert treatment for neurological disorders.", icon: Brain },
+    { name: "Neuro Surgery", desc: "Advanced surgical treatments for brain and spine conditions.", icon: Brain },
+    { name: "Pediatric Surgery", desc: "Specialized surgical care for infants, children, and adolescents.", icon: Baby },
+    { name: "Medical & Surgical Oncology", desc: "Expert cancer care, chemotherapy, and advanced surgical oncology.", icon: Activity },
+    { name: "E N T", desc: "Ear, nose, and throat disorders treatment and surgeries.", icon: Stethoscope },
+    { name: "Diabetology & Endocrinology", desc: "Expert care for diabetes, thyroid, and hormonal disorders.", icon: Activity },
+    { name: "Dermatology & Plastic Surgery", desc: "Advanced skin care, cosmetic, and reconstructive surgical procedures.", icon: Scissors },
+    { name: "Spine Surgery", desc: "Comprehensive care and advanced surgical treatments for spinal disorders.", icon: Bone },
+    { name: "24/7 Diagnostics", desc: "Round-the-clock pathology and imaging services for accurate diagnosis.", icon: Activity },
   ];
 
   return (
@@ -30,7 +34,7 @@ export default function DepartmentsPage() {
       {/* Hero Section */}
       <section className="bg-clinical-blue text-white py-24 px-gutter relative overflow-hidden">
         <div className="max-w-container-max mx-auto relative z-10 text-center">
-          <h1 className="font-display-lg text-display-lg mb-6">Centers of <span className="text-healing-emerald">Excellence</span></h1>
+          <h1 className="font-display-lg text-display-lg mb-6">Our <span className="text-healing-emerald">Specialities</span></h1>
           <p className="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto opacity-90">
             Precision medical care across advanced surgical and medical disciplines. Our highly specialized departments are equipped with world-class technology.
           </p>

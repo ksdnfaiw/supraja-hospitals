@@ -42,12 +42,12 @@ export default function Header() {
   const specialties = [
     { name: "Cardiology", desc: "Expert heart care", icon: Heart, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
     { name: "Neurology", desc: "Brain & spine specialists", icon: Brain, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
-    { name: "Oncology", desc: "Comprehensive cancer care", icon: Activity, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
-    { name: "Orthopedics", desc: "Bone & joint treatments", icon: Bone, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
-    { name: "Pediatrics", desc: "Comprehensive child care", icon: Baby, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
-    { name: "Ophthalmology", desc: "State-of-the-art eye care", icon: Eye, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
-    { name: "Internal Medicine", desc: "Preventive care", icon: Stethoscope, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
-    { name: "General Surgery", desc: "Minimally invasive", icon: Scissors, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Medical & Surgical Oncology", desc: "Comprehensive cancer care", icon: Activity, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Orthopaedics", desc: "Bone & joint treatments", icon: Bone, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Pediatrics & Neonatology", desc: "Comprehensive child care", icon: Baby, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Radiology", desc: "Advanced imaging services", icon: Eye, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "General Medicine", desc: "Preventive care", icon: Stethoscope, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "General & Laparoscopic Surgery", desc: "Minimally invasive", icon: Scissors, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
   ];
 
   return (

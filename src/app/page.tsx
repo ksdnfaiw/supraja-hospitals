@@ -106,7 +106,7 @@ export default function HomePage() {
               <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
                 <Microscope className="text-hospital-teal" size={32} />
               </div>
-              <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Oncology</h4>
+              <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Medical & Surgical Oncology</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Advanced surgical and medical oncology protocols for precise cancer treatments.</p>
               <span className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 View Details <ChevronRight size={18} />
@@ -116,7 +116,7 @@ export default function HomePage() {
               <div className="w-16 h-16 rounded-xl bg-clinical-blue/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-clinical-blue/10 transition-all">
                 <Bone className="text-hospital-teal" size={32} />
               </div>
-              <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Orthopedics</h4>
+              <h4 className="font-headline-md text-headline-md text-clinical-blue mb-3">Orthopaedics</h4>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">Modern orthopedic procedures including joint replacement and trauma care.</p>
               <span className="text-hospital-teal font-label-md text-label-md flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 View Details <ChevronRight size={18} />

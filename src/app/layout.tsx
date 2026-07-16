@@ -76,12 +76,12 @@ export default function RootLayout({
                   <ul className="space-y-3 text-sm text-surface-container-low/70">
                     <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Cardiology</a></li>
                     <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Neurology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Oncology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Orthopedics</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Pediatrics</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Ophthalmology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Internal Medicine</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">General Surgery</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Medical & Surgical Oncology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Orthopaedics</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Pediatrics & Neonatology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Radiology</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">General Medicine</a></li>
+                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">General & Laparoscopic Surgery</a></li>
                   </ul>
                 </div>
               </div>
