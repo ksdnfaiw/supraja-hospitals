@@ -37,7 +37,7 @@ export default function RootLayout({
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-healing-emerald/50 to-transparent opacity-50"></div>
           
           <div className="max-w-container-max mx-auto px-4 md:px-gutter relative z-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12 mb-12">
               
               {/* Brand & Contact Block */}
               <div className="lg:col-span-4 space-y-8">
@@ -57,7 +57,7 @@ export default function RootLayout({
               </div>
 
               {/* Patient Links */}
-              <div className="lg:col-span-2 space-y-6 lg:ml-auto">
+              <div className="lg:col-span-3 space-y-6 lg:ml-auto">
                 <div>
                   <h5 className="font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-3 mb-6 inline-block">FOR PATIENTS</h5>
                   <ul className="space-y-3 text-sm text-surface-container-low/70">
@@ -65,23 +65,6 @@ export default function RootLayout({
                     <li><a href="/health-packages" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Health Checkups</a></li>
                     <li><a href="/medicines" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Medicines</a></li>
                     <li><a href="/contact" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Book Appointment</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Specialties Links */}
-              <div className="lg:col-span-2 space-y-6">
-                <div>
-                  <h5 className="font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-3 mb-6 inline-block">OUR SPECIALTIES</h5>
-                  <ul className="space-y-3 text-sm text-surface-container-low/70">
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Cardiology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Neurology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Medical & Surgical Oncology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Orthopaedics</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Pediatrics & Neonatology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">Radiology</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">General Medicine</a></li>
-                    <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block">General & Laparoscopic Surgery</a></li>
                   </ul>
                 </div>
               </div>
@@ -100,7 +83,7 @@ export default function RootLayout({
               </div>
 
               {/* Social Links */}
-              <div className="lg:col-span-2 space-y-6">
+              <div className="lg:col-span-3 space-y-6">
                 <div>
                   <h5 className="font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-3 mb-6 inline-block">CONNECT WITH US</h5>
                   <div className="flex flex-wrap gap-3">
@@ -113,6 +96,38 @@ export default function RootLayout({
                 </div>
               </div>
 
+            </div>
+
+            {/* Specialties Section - Full Width */}
+            <div className="pt-8 border-t border-white/10 mb-8">
+              <h5 className="font-bold uppercase tracking-widest text-sm mb-6 inline-block text-white">OUR SPECIALTIES</h5>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-3 text-sm text-surface-container-low/70">
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="General Medicine">General Medicine</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Pulmonology">Pulmonology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="General & Laparoscopic Surgery">General & Laparoscopic Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Pediatrics & Neonatology">Pediatrics & Neonatology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Orthopaedics">Orthopaedics</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Gynecology & Obstetrics">Gynecology & Obstetrics</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Critical Care & Polytrauma">Critical Care & Polytrauma</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Dental & Maxillofacial Surgery">Dental & Maxillofacial Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Joint Replacement Surgery">Joint Replacement Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Radiology">Radiology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Psychiatry">Psychiatry</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Physiotherapy">Physiotherapy</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Gastroenterology">Gastroenterology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Urology">Urology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Cardiology">Cardiology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Nephrology & Dialysis">Nephrology & Dialysis</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Neurology">Neurology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Neuro Surgery">Neuro Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Pediatric Surgery">Pediatric Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Medical & Surgical Oncology">Medical & Surgical Oncology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="E N T">E N T</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Diabetology & Endocrinology">Diabetology & Endocrinology</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Dermatology & Plastic Surgery">Dermatology & Plastic Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="Spine Surgery">Spine Surgery</a></li>
+                <li><a href="/departments" className="hover:text-healing-emerald hover:translate-x-1 transition-all inline-block truncate w-full" title="24/7 Diagnostics">24/7 Diagnostics</a></li>
+              </ul>
             </div>
 
             {/* Bottom Bar */}

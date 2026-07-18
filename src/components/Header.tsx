@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Activity, Heart, Brain, Bone, Stethoscope, Baby, Eye, Scissors, Award } from "lucide-react";
+import { Menu, X, ChevronDown, Activity, Heart, Brain, Bone, Stethoscope, Baby, Eye, Scissors, Award, Users, Wind, Smile } from "lucide-react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,14 +40,31 @@ export default function Header() {
   };
 
   const specialties = [
-    { name: "Cardiology", desc: "Expert heart care", icon: Heart, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
-    { name: "Neurology", desc: "Brain & spine specialists", icon: Brain, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
-    { name: "Medical & Surgical Oncology", desc: "Comprehensive cancer care", icon: Activity, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
-    { name: "Orthopaedics", desc: "Bone & joint treatments", icon: Bone, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
-    { name: "Pediatrics & Neonatology", desc: "Comprehensive child care", icon: Baby, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "General Medicine", desc: "Comprehensive adult care", icon: Stethoscope, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Pulmonology", desc: "Respiratory diseases", icon: Wind, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "General & Laparoscopic Surgery", desc: "Minimally invasive", icon: Scissors, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Pediatrics & Neonatology", desc: "Comprehensive child care", icon: Baby, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Orthopaedics", desc: "Bone & joint treatments", icon: Bone, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Gynecology & Obstetrics", desc: "Women's health & maternity", icon: Users, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Critical Care & Polytrauma", desc: "24/7 intensive care", icon: Activity, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Dental & Maxillofacial Surgery", desc: "Comprehensive dental care", icon: Smile, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Joint Replacement Surgery", desc: "Knee & hip replacements", icon: Bone, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
     { name: "Radiology", desc: "Advanced imaging services", icon: Eye, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
-    { name: "General Medicine", desc: "Preventive care", icon: Stethoscope, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
-    { name: "General & Laparoscopic Surgery", desc: "Minimally invasive", icon: Scissors, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Psychiatry", desc: "Mental health & well-being", icon: Brain, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Physiotherapy", desc: "Rehabilitation & therapy", icon: Activity, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Gastroenterology", desc: "Digestive system disorders", icon: Stethoscope, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Urology", desc: "Urinary tract & reproductive", icon: Activity, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Cardiology", desc: "Expert heart care", icon: Heart, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Nephrology & Dialysis", desc: "Kidney diseases & dialysis", icon: Stethoscope, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Neurology", desc: "Brain & spine specialists", icon: Brain, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Neuro Surgery", desc: "Surgical treatments for brain", icon: Brain, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Pediatric Surgery", desc: "Surgical care for children", icon: Baby, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Medical & Surgical Oncology", desc: "Comprehensive cancer care", icon: Activity, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "E N T", desc: "Ear, nose, and throat", icon: Stethoscope, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Diabetology & Endocrinology", desc: "Diabetes & hormonal", icon: Activity, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "Dermatology & Plastic Surgery", desc: "Skin care & cosmetic", icon: Scissors, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" },
+    { name: "Spine Surgery", desc: "Spinal disorders treatment", icon: Bone, color: "text-healing-emerald", bg: "bg-healing-emerald/10", hoverBg: "group-hover/item:bg-healing-emerald" },
+    { name: "24/7 Diagnostics", desc: "Pathology & imaging", icon: Activity, color: "text-clinical-blue", bg: "bg-clinical-blue/5", hoverBg: "group-hover/item:bg-clinical-blue" }
   ];
 
   return (
@@ -92,25 +109,27 @@ export default function Header() {
               
               {/* Dropdown Menu */}
               <div 
-                className={`absolute top-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2 w-[600px] bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-border-subtle p-4 transition-all duration-400 ease-out origin-top ${
+                className={`absolute top-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-border-subtle p-2 transition-all duration-400 ease-out origin-top ${
                   isSpecialtiesOpen ? "opacity-100 visible scale-100 translate-y-0" : "opacity-0 invisible scale-95 -translate-y-4"
                 }`}
               >
                 {/* Decorative arrow pointing up */}
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-border-subtle rotate-45 rounded-tl-sm"></div>
                 
-                <div className="relative z-10 grid grid-cols-2 gap-2">
-                  {specialties.map((spec, idx) => (
-                    <Link key={idx} href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
-                      <div className={`w-10 h-10 rounded-full ${spec.bg} ${spec.color} flex items-center justify-center ${spec.hoverBg} group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm`}>
-                        <spec.icon size={18} />
-                      </div>
-                      <div>
-                        <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors">{spec.name}</div>
-                        <div className="text-xs text-on-surface-variant/70 mt-0.5">{spec.desc}</div>
-                      </div>
-                    </Link>
-                  ))}
+                <div className="relative z-10 max-h-[65vh] overflow-y-auto p-2 custom-scrollbar">
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+                    {specialties.map((spec, idx) => (
+                      <Link key={idx} href="/departments" className="flex items-center gap-4 p-3 rounded-xl hover:bg-surface-gray/50 transition-colors group/item" onClick={handleDropdownClick}>
+                        <div className={`w-10 h-10 rounded-full ${spec.bg} ${spec.color} flex items-center justify-center ${spec.hoverBg} group-hover/item:text-white transition-all group-hover/item:scale-110 shadow-sm shrink-0`}>
+                          <spec.icon size={18} />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="font-label-md text-sm text-clinical-blue font-bold transition-colors truncate">{spec.name}</div>
+                          <div className="text-xs text-on-surface-variant/70 mt-0.5 truncate">{spec.desc}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
