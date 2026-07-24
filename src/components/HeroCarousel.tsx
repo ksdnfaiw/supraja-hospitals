@@ -9,25 +9,17 @@ const slides = [
     id: 1,
     title: "World-Class Healthcare Infrastructure",
     subtitle: "Experience precision and safety with our state-of-the-art 200-bed facility.",
-    image: "/images/hero_building_ai.png",
+    image: "/images/new_building_exterior.jpg", // Placeholder for the building image
     ctaText: "Explore Facilities",
     ctaLink: "/about"
   },
   {
     id: 2,
-    title: "Advanced Oncology Care & Beyond",
-    subtitle: "Comprehensive cancer treatments with the latest medical technology.",
-    image: "/images/hero_ct_scan_ai.png",
+    title: "Advanced Medical Technology",
+    subtitle: "Comprehensive diagnosis and treatments with the latest medical imaging.",
+    image: "/images/new_ct_scan.jpg", // Placeholder for the CT scan image
     ctaText: "View Specialties",
     ctaLink: "/departments"
-  },
-  {
-    id: 3,
-    title: "Compassionate Patient Care",
-    subtitle: "Dedicated specialists ensuring holistic well-being for you and your family.",
-    image: "/images/hero_slide_3.png",
-    ctaText: "Find a Doctor",
-    ctaLink: "/doctors"
   }
 ];
 
@@ -75,8 +67,7 @@ export default function HeroCarousel() {
                     {slide.title.split(' ').map((word, i) => 
                       // Highlight specific words based on slide
                       (slide.id === 1 && word === "Infrastructure") || 
-                      (slide.id === 2 && word === "Oncology") || 
-                      (slide.id === 3 && word === "Care") 
+                      (slide.id === 2 && word === "Technology")
                         ? <span key={i} className="text-healing-emerald">{word} </span> 
                         : <span key={i}>{word} </span>
                     )}

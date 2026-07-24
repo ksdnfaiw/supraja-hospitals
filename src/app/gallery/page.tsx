@@ -36,6 +36,18 @@ export default function GalleryPage() {
       url: "/images/gallery/gallery-5.jpg",
       title: "Advanced Radiology",
       height: "h-[400px]"
+    },
+    {
+      id: 6,
+      url: "/images/gallery/gallery-pharmacy.jpg", // Placeholder for pharmacy/cafeteria image
+      title: "24/7 Pharmacy & Cafeteria",
+      height: "h-[350px]"
+    },
+    {
+      id: 7,
+      url: "/images/gallery/gallery-exterior.jpg", // Placeholder for hospital exterior image
+      title: "Hospital Exterior",
+      height: "h-[400px]"
     }
   ];
 
