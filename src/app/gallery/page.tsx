@@ -39,13 +39,13 @@ export default function GalleryPage() {
     },
     {
       id: 6,
-      url: "/images/gallery/gallery-pharmacy.jpg", // Placeholder for pharmacy/cafeteria image
+      url: "/images/ot_image.png",
       title: "24/7 Pharmacy & Cafeteria",
       height: "h-[350px]"
     },
     {
       id: 7,
-      url: "/images/gallery/gallery-exterior.jpg", // Placeholder for hospital exterior image
+      url: "/images/facility_image.png",
       title: "Hospital Exterior",
       height: "h-[400px]"
     }

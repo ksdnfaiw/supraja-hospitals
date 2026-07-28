@@ -9,7 +9,7 @@ const slides = [
     id: 1,
     title: "World-Class Healthcare Infrastructure",
     subtitle: "Experience precision and safety with our state-of-the-art 200-bed facility.",
-    image: "/images/new_building_exterior.jpg", // Placeholder for the building image
+    image: "/images/hero_building_ai.png",
     ctaText: "Explore Facilities",
     ctaLink: "/about"
   },
@@ -17,9 +17,17 @@ const slides = [
     id: 2,
     title: "Advanced Medical Technology",
     subtitle: "Comprehensive diagnosis and treatments with the latest medical imaging.",
-    image: "/images/new_ct_scan.jpg", // Placeholder for the CT scan image
+    image: "/images/hero_slide_2_new.png",
     ctaText: "View Specialties",
     ctaLink: "/departments"
+  },
+  {
+    id: 3,
+    title: "Expert Care, Compassionate Hands",
+    subtitle: "Our dedicated team of specialists delivers world-class medical care with precision and compassion.",
+    image: "/images/hero_slide_4.png",
+    ctaText: "Meet Our Doctors",
+    ctaLink: "/doctors"
   }
 ];
 
