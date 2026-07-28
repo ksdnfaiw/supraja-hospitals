@@ -15,24 +15,12 @@ export default function GalleryPage() {
     },
     {
       id: 2,
-      url: "/images/home_about_team.png",
-      title: "Our Dedicated Team",
-      height: "h-[420px]"
-    },
-    {
-      id: 3,
       url: "/images/gallery/gallery-3.jpg",
       title: "CT Scan Facility",
       height: "h-[350px]"
     },
     {
-      id: 4,
-      url: "/images/gallery/gallery-4.jpg",
-      title: "CT Scan Procedure",
-      height: "h-[300px]"
-    },
-    {
-      id: 5,
+      id: 3,
       url: "/images/gallery/gallery-5.jpg",
       title: "Advanced Radiology",
       height: "h-[400px]"
