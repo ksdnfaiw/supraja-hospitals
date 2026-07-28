@@ -15,9 +15,9 @@ export default function GalleryPage() {
     },
     {
       id: 2,
-      url: "/images/gallery/gallery-2.jpg",
-      title: "Operating Theater Staff",
-      height: "h-[450px]"
+      url: "/images/home_about_team.png",
+      title: "Our Dedicated Team",
+      height: "h-[420px]"
     },
     {
       id: 3,
@@ -35,18 +35,6 @@ export default function GalleryPage() {
       id: 5,
       url: "/images/gallery/gallery-5.jpg",
       title: "Advanced Radiology",
-      height: "h-[400px]"
-    },
-    {
-      id: 6,
-      url: "/images/ot_image.png",
-      title: "24/7 Pharmacy & Cafeteria",
-      height: "h-[350px]"
-    },
-    {
-      id: 7,
-      url: "/images/facility_image.png",
-      title: "Hospital Exterior",
       height: "h-[400px]"
     }
   ];
